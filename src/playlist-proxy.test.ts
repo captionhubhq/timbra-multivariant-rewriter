@@ -94,6 +94,73 @@ describe("PlaylistProxy.handle", () => {
     expect(fetcher).toHaveBeenCalledWith(SOURCE_URL);
     expect(fetcher).toHaveBeenCalledTimes(1);
   });
+
+  test("returns 504 when the fetcher signals an AbortError (timeout)", async () => {
+    const fetcher: UpstreamFetcher = async () => {
+      const err = new Error("The user aborted a request.");
+      err.name = "AbortError";
+      throw err;
+    };
+    const result = await makeProxy(fetcher).handle("GET");
+    expect(result.statusCode).toBe(504);
+    expect(result.body).toMatch(/timed out/);
+    expect(result.headers["Access-Control-Allow-Origin"]).toBe("*");
+  });
+
+  test("returns 502 when upstream body is empty", async () => {
+    const fetcher: UpstreamFetcher = async () => ({
+      status: 200,
+      body: "",
+      headers: {},
+    });
+    const result = await makeProxy(fetcher).handle("GET");
+    expect(result.statusCode).toBe(502);
+    expect(result.body).toMatch(/empty body/);
+  });
+
+  test("returns 502 when upstream body is not an HLS playlist", async () => {
+    const fetcher: UpstreamFetcher = async () => ({
+      status: 200,
+      body: "<html><body>Not Found</body></html>",
+      headers: {},
+    });
+    const result = await makeProxy(fetcher).handle("GET");
+    expect(result.statusCode).toBe(502);
+    expect(result.body).toMatch(/not return an HLS playlist/);
+  });
+
+  test("tolerates a BOM and leading whitespace before #EXTM3U", async () => {
+    const fetcher: UpstreamFetcher = async () => ({
+      status: 200,
+      body: "﻿\n" + MINIMAL_MASTER,
+      headers: {},
+    });
+    const result = await makeProxy(fetcher).handle("GET");
+    expect(result.statusCode).toBe(200);
+    expect(result.body).toContain('SUBTITLES="subs"');
+  });
+});
+
+describe("PlaylistProxy.looksLikeHls", () => {
+  test("accepts a minimal HLS playlist", () => {
+    expect(PlaylistProxy.looksLikeHls("#EXTM3U\n")).toBe(true);
+  });
+
+  test("accepts a playlist with a UTF-8 BOM", () => {
+    expect(PlaylistProxy.looksLikeHls("﻿#EXTM3U\n")).toBe(true);
+  });
+
+  test("rejects HTML", () => {
+    expect(PlaylistProxy.looksLikeHls("<html>")).toBe(false);
+  });
+
+  test("rejects empty string", () => {
+    expect(PlaylistProxy.looksLikeHls("")).toBe(false);
+  });
+
+  test("rejects JSON", () => {
+    expect(PlaylistProxy.looksLikeHls('{"error":"forbidden"}')).toBe(false);
+  });
 });
 
 describe("PlaylistProxy.filterResponseHeaders", () => {

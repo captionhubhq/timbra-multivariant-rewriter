@@ -61,8 +61,11 @@ master playlist. The response:
   `Content-Length`, `Content-Encoding`, `Vary`).
 - Adds permissive CORS so browser-based players can fetch it cross-origin.
 - Handles `HEAD` (empty body, same headers) and `OPTIONS` (204 preflight).
-- Maps upstream fetch failures to `502` and passes through upstream `4xx`/
-  `5xx` bodies unchanged.
+- Passes through upstream `4xx`/`5xx` bodies unchanged.
+- Aborts the upstream fetch after 10s and returns `504 Gateway Timeout`.
+- Returns `502 Bad Gateway` when the upstream connection fails, the body
+  is empty, exceeds 5 MB, or doesn't start with `#EXTM3U` (i.e. isn't an
+  HLS playlist). Tolerates a leading UTF-8 BOM.
 
 Client request headers are **not** forwarded to the origin — the proxy
 always issues a clean upstream request.
