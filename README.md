@@ -70,6 +70,17 @@ master playlist. The response:
 Client request headers are **not** forwarded to the origin — the proxy
 always issues a clean upstream request.
 
+### Limitations
+
+- **Redirects on `PLAYLIST_URL` are not fully handled.** The upstream
+  fetch follows `3xx` hops, but relative URIs inside the playlist are
+  resolved against the configured `PLAYLIST_URL`, not the post-redirect
+  URL that `fetch` actually landed on. If the redirect target serves
+  the playlist from a different host or path prefix (typical of CDN
+  geo-routing or signed-URL handoffs), the rewritten segment URLs will
+  point at the wrong origin. Workaround: configure `PLAYLIST_URL` with
+  the final, non-redirecting URL.
+
 ## Develop
 
 ```sh
