@@ -1,0 +1,1197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rewriter against test_hls_manifests apple.m3u8 mode=add 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:4
+#EXT-X-INDEPENDENT-SEGMENTS
+
+##-- 1.2 (2024-09-10T14:19:15) --##
+
+##--eLive1 avc_hd (2018335) primary captions--##
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-p",NAME="Deutsch",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="de",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_de.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-p",NAME="English",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="en",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_en.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-p",NAME="Español",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="es",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_es.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-p",NAME="Français",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="fr",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_fr.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-p",NAME="日本語",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ja",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_ja.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-p",NAME="한국어",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ko",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_ko.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-p",NAME="简体中文",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="zh",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_zh.m3u8"
+
+##--eLive2 avc_hd (2040784-b) backup captions--##
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-b",NAME="Deutsch",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="de",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_de.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-b",NAME="English",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="en",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_en.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-b",NAME="Español",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="es",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_es.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-b",NAME="Français",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="fr",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_fr.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-b",NAME="日本語",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ja",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_ja.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-b",NAME="한국어",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ko",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_ko.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="avc_hd_subs-ak-b",NAME="简体中文",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="zh",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_zh.m3u8"
+
+
+##--eLive7 hvc_uhd (2025510) primary captions--##
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-p",NAME="Deutsch",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="de",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_de.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-p",NAME="English",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="en",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_en.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-p",NAME="Español",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="es",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_es.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-p",NAME="Français",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="fr",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_fr.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-p",NAME="日本語",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ja",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_ja.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-p",NAME="한국어",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ko",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_ko.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-p",NAME="简体中文",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="zh",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_zh.m3u8"
+
+##--eLive8 hvc_uhd (2040860-b) backup captions--##
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-b",NAME="Deutsch",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="de",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_de.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-b",NAME="English",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="en",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_en.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-b",NAME="Español",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="es",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_es.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-b",NAME="Français",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="fr",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_fr.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-b",NAME="日本語",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ja",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_ja.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-b",NAME="한국어",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ko",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_ko.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="hvc_uhd_subs-ak-b",NAME="简体中文",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="zh",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_zh.m3u8"
+
+
+##--eLive11 dovi_uhd (2025513) primary captions--##
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-p",NAME="Deutsch",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="de",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_de.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-p",NAME="English",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="en",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_en.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-p",NAME="Español",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="es",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_es.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-p",NAME="Français",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="fr",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_fr.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-p",NAME="日本語",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ja",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_ja.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-p",NAME="한국어",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ko",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_ko.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-p",NAME="简体中文",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="zh",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_zh.m3u8"
+
+##--eLive12 dovi_uhd (2040862-b) backup captions--##
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-b",NAME="Deutsch",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="de",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_de.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-b",NAME="English",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="en",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_en.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-b",NAME="Español",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="es",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_es.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-b",NAME="Français",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="fr",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_fr.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-b",NAME="日本語",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ja",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_ja.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-b",NAME="한국어",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="ko",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_ko.m3u8"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="dovi_uhd_subs-ak-b",NAME="简体中文",DEFAULT=NO,AUTOSELECT=NO,FORCED=NO,LANGUAGE="zh",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_zh.m3u8"
+
+
+##--eLive1 avc_hd (2018335) primary audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="avc_hd_audio_en_2ch_aac_128-ak-p",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="avc_hd_audio_en_16ch_atmos_640-ak-p",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="avc_hd_audio_en_2ch_aac_128-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="avc_hd_audio_en_16ch_atmos_640-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_audio_ad_en_16ch_atmos_640.m3u8"
+
+##--eLive2 avc_hd (2040784-b) backup audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="avc_hd_audio_en_2ch_aac_128-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="avc_hd_audio_en_16ch_atmos_640-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="avc_hd_audio_en_2ch_aac_128-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="avc_hd_audio_en_16ch_atmos_640-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_audio_ad_en_16ch_atmos_640.m3u8"
+
+
+##--eLive7 hvc_uhd (2025510) primary audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="hvc_uhd_audio_en_2ch_aac_128-ak-p",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="hvc_uhd_audio_en_16ch_atmos_640-ak-p",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="hvc_uhd_audio_en_2ch_aac_128-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="hvc_uhd_audio_en_16ch_atmos_640-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_audio_ad_en_16ch_atmos_640.m3u8"
+
+##--eLive8 hvc_uhd (2040860-b) backup audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="hvc_uhd_audio_en_2ch_aac_128-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="hvc_uhd_audio_en_16ch_atmos_640-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="hvc_uhd_audio_en_2ch_aac_128-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="hvc_uhd_audio_en_16ch_atmos_640-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_audio_ad_en_16ch_atmos_640.m3u8"
+
+
+##--eLive11 dovi_uhd (2025513) primary audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="dovi_uhd_audio_en_2ch_aac_128-ak-p",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="dovi_uhd_audio_en_16ch_atmos_640-ak-p",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="dovi_uhd_audio_en_2ch_aac_128-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="dovi_uhd_audio_en_16ch_atmos_640-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_audio_ad_en_16ch_atmos_640.m3u8"
+
+##--eLive12 dovi_uhd (2040862-b) backup audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="dovi_uhd_audio_en_2ch_aac_128-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="dovi_uhd_audio_en_16ch_atmos_640-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="dovi_uhd_audio_en_2ch_aac_128-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="dovi_uhd_audio_en_16ch_atmos_640-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_audio_ad_en_16ch_atmos_640.m3u8"
+
+
+
+
+##--eLive1 avc_hd (2018335) primary video--##
+#EXT-X-STREAM-INF:BANDWIDTH=2884778,AVERAGE-BANDWIDTH=2132098,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_540p_2000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3394474,AVERAGE-BANDWIDTH=2642526,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_540p_2000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=4105070,AVERAGE-BANDWIDTH=3132013,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_720p_3000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4614766,AVERAGE-BANDWIDTH=3642441,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_720p_3000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1655093,AVERAGE-BANDWIDTH=1332156,VIDEO-RANGE=SDR,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_360p_1200.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2164789,AVERAGE-BANDWIDTH=1842584,VIDEO-RANGE=SDR,CODECS="avc1.4d401e,ec-3",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_360p_1200.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=5919073,AVERAGE-BANDWIDTH=4631853,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_720p_4500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=6428769,AVERAGE-BANDWIDTH=5142281,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_720p_4500.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=7835193,AVERAGE-BANDWIDTH=6131833,VIDEO-RANGE=SDR,CODECS="avc1.640028,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_1080p_6000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=8344889,AVERAGE-BANDWIDTH=6642261,VIDEO-RANGE=SDR,CODECS="avc1.640028,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_1080p_6000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=9761339,AVERAGE-BANDWIDTH=7632336,VIDEO-RANGE=SDR,CODECS="avc1.640028,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_1080p_7500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10271035,AVERAGE-BANDWIDTH=8142764,VIDEO-RANGE=SDR,CODECS="avc1.640028,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="avc_hd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_1080p_7500.m3u8
+
+
+
+##--eLive2 avc_hd (2040784-b) backup video--##
+#EXT-X-STREAM-INF:BANDWIDTH=2884778,AVERAGE-BANDWIDTH=2132098,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_540p_2000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3394474,AVERAGE-BANDWIDTH=2642526,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_540p_2000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=4105070,AVERAGE-BANDWIDTH=3132013,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_720p_3000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4614766,AVERAGE-BANDWIDTH=3642441,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_720p_3000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1655093,AVERAGE-BANDWIDTH=1332156,VIDEO-RANGE=SDR,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_360p_1200.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2164789,AVERAGE-BANDWIDTH=1842584,VIDEO-RANGE=SDR,CODECS="avc1.4d401e,ec-3",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_360p_1200.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=5919073,AVERAGE-BANDWIDTH=4631853,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_720p_4500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=6428769,AVERAGE-BANDWIDTH=5142281,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_720p_4500.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=7835193,AVERAGE-BANDWIDTH=6131833,VIDEO-RANGE=SDR,CODECS="avc1.640028,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_1080p_6000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=8344889,AVERAGE-BANDWIDTH=6642261,VIDEO-RANGE=SDR,CODECS="avc1.640028,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_1080p_6000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=9761339,AVERAGE-BANDWIDTH=7632336,VIDEO-RANGE=SDR,CODECS="avc1.640028,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_1080p_7500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10271035,AVERAGE-BANDWIDTH=8142764,VIDEO-RANGE=SDR,CODECS="avc1.640028,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="avc_hd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_1080p_7500.m3u8
+
+
+
+
+##--eLive7 hvc_uhd (2025510) primary video--##
+#EXT-X-STREAM-INF:BANDWIDTH=3625094,AVERAGE-BANDWIDTH=3031989,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_720p_2900.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4134790,AVERAGE-BANDWIDTH=3542417,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_720p_2900.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1522507,AVERAGE-BANDWIDTH=1222159,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_360p_1090.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2032203,AVERAGE-BANDWIDTH=1732587,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_360p_1090.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=2492280,AVERAGE-BANDWIDTH=2062088,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_540p_1930.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3001976,AVERAGE-BANDWIDTH=2572516,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_540p_1930.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=5089597,AVERAGE-BANDWIDTH=4211920,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_720p_4080.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=5599293,AVERAGE-BANDWIDTH=4722348,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_720p_4080.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=8598286,AVERAGE-BANDWIDTH=7131683,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1080p_7000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=9107982,AVERAGE-BANDWIDTH=7642111,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1080p_7000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=6766917,AVERAGE-BANDWIDTH=5531811,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1080p_5400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=7276613,AVERAGE-BANDWIDTH=6042239,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1080p_5400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=9783515,AVERAGE-BANDWIDTH=8231702,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1440p_8100.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10293211,AVERAGE-BANDWIDTH=8742130,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,ec-3",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1440p_8100.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=15721040,AVERAGE-BANDWIDTH=12543719,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_2160p_12500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=16230736,AVERAGE-BANDWIDTH=13054147,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,ec-3",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="hvc_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_2160p_12500.m3u8
+
+
+
+##--eLive8 hvc_uhd (2040860-b) backup video--##
+#EXT-X-STREAM-INF:BANDWIDTH=3625094,AVERAGE-BANDWIDTH=3031989,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_720p_2900.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4134790,AVERAGE-BANDWIDTH=3542417,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_720p_2900.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1522507,AVERAGE-BANDWIDTH=1222159,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_360p_1090.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2032203,AVERAGE-BANDWIDTH=1732587,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_360p_1090.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=2492280,AVERAGE-BANDWIDTH=2062088,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_540p_1930.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3001976,AVERAGE-BANDWIDTH=2572516,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_540p_1930.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=5089597,AVERAGE-BANDWIDTH=4211920,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_720p_4080.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=5599293,AVERAGE-BANDWIDTH=4722348,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_720p_4080.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=8598286,AVERAGE-BANDWIDTH=7131683,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1080p_7000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=9107982,AVERAGE-BANDWIDTH=7642111,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1080p_7000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=6766917,AVERAGE-BANDWIDTH=5531811,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1080p_5400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=7276613,AVERAGE-BANDWIDTH=6042239,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1080p_5400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=9783515,AVERAGE-BANDWIDTH=8231702,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1440p_8100.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10293211,AVERAGE-BANDWIDTH=8742130,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,ec-3",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1440p_8100.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=15721040,AVERAGE-BANDWIDTH=12543719,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_2160p_12500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=16230736,AVERAGE-BANDWIDTH=13054147,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,ec-3",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="hvc_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_2160p_12500.m3u8
+
+
+
+
+##--eLive11 dovi_uhd (2025513) primary video--##
+#EXT-X-STREAM-INF:BANDWIDTH=4384287,AVERAGE-BANDWIDTH=4010620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_720p_3400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4893983,AVERAGE-BANDWIDTH=4521048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_720p_3400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1843978,AVERAGE-BANDWIDTH=1700620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_360p_1300.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2353674,AVERAGE-BANDWIDTH=2211048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_360p_1300.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=3053650,AVERAGE-BANDWIDTH=2800620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_540p_2300.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3563346,AVERAGE-BANDWIDTH=3311048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_540p_2300.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=6077825,AVERAGE-BANDWIDTH=5550620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_720p_4800.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=6587521,AVERAGE-BANDWIDTH=6061048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_720p_4800.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=10432639,AVERAGE-BANDWIDTH=9510620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1080p_8400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10942335,AVERAGE-BANDWIDTH=10021048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1080p_8400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=8110071,AVERAGE-BANDWIDTH=7398620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1080p_6480.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=8619767,AVERAGE-BANDWIDTH=7909048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1080p_6480.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=12005210,AVERAGE-BANDWIDTH=10940620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.05/db1p",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1440p_9700.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=12514906,AVERAGE-BANDWIDTH=11451048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.05/db1p",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1440p_9700.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=17085825,AVERAGE-BANDWIDTH=15560620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_2160p_13900.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=17595521,AVERAGE-BANDWIDTH=16071048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_2160p_13900.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=24464814,AVERAGE-BANDWIDTH=22270620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_2160p_20000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=24974510,AVERAGE-BANDWIDTH=22781048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="dovi_uhd_subs-ak-p"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_2160p_20000.m3u8
+
+
+
+##--eLive12 dovi_uhd (2040862-b) backup video--##
+#EXT-X-STREAM-INF:BANDWIDTH=4384287,AVERAGE-BANDWIDTH=4010620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_720p_3400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4893983,AVERAGE-BANDWIDTH=4521048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_720p_3400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1843978,AVERAGE-BANDWIDTH=1700620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_360p_1300.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2353674,AVERAGE-BANDWIDTH=2211048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_360p_1300.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=3053650,AVERAGE-BANDWIDTH=2800620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_540p_2300.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3563346,AVERAGE-BANDWIDTH=3311048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_540p_2300.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=6077825,AVERAGE-BANDWIDTH=5550620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_720p_4800.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=6587521,AVERAGE-BANDWIDTH=6061048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_720p_4800.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=10432639,AVERAGE-BANDWIDTH=9510620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1080p_8400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10942335,AVERAGE-BANDWIDTH=10021048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1080p_8400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=8110071,AVERAGE-BANDWIDTH=7398620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1080p_6480.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=8619767,AVERAGE-BANDWIDTH=7909048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1080p_6480.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=12005210,AVERAGE-BANDWIDTH=10940620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.05/db1p",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1440p_9700.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=12514906,AVERAGE-BANDWIDTH=11451048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.05/db1p",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1440p_9700.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=17085825,AVERAGE-BANDWIDTH=15560620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_2160p_13900.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=17595521,AVERAGE-BANDWIDTH=16071048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_2160p_13900.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=24464814,AVERAGE-BANDWIDTH=22270620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_2160p_20000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=24974510,AVERAGE-BANDWIDTH=22781048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="dovi_uhd_subs-ak-b"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_2160p_20000.m3u8
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests apple.m3u8 mode=replace 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:4
+#EXT-X-INDEPENDENT-SEGMENTS
+
+##-- 1.2 (2024-09-10T14:19:15) --##
+
+##--eLive1 avc_hd (2018335) primary captions--##
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+
+##--eLive2 avc_hd (2040784-b) backup captions--##
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+
+
+##--eLive7 hvc_uhd (2025510) primary captions--##
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+
+##--eLive8 hvc_uhd (2040860-b) backup captions--##
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+
+
+##--eLive11 dovi_uhd (2025513) primary captions--##
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+
+##--eLive12 dovi_uhd (2040862-b) backup captions--##
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+# NOTE: Existing subtitles removed by CaptionHub
+
+
+##--eLive1 avc_hd (2018335) primary audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="avc_hd_audio_en_2ch_aac_128-ak-p",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="avc_hd_audio_en_16ch_atmos_640-ak-p",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="avc_hd_audio_en_2ch_aac_128-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="avc_hd_audio_en_16ch_atmos_640-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_audio_ad_en_16ch_atmos_640.m3u8"
+
+##--eLive2 avc_hd (2040784-b) backup audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="avc_hd_audio_en_2ch_aac_128-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="avc_hd_audio_en_16ch_atmos_640-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="avc_hd_audio_en_2ch_aac_128-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="avc_hd_audio_en_16ch_atmos_640-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_audio_ad_en_16ch_atmos_640.m3u8"
+
+
+##--eLive7 hvc_uhd (2025510) primary audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="hvc_uhd_audio_en_2ch_aac_128-ak-p",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="hvc_uhd_audio_en_16ch_atmos_640-ak-p",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="hvc_uhd_audio_en_2ch_aac_128-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="hvc_uhd_audio_en_16ch_atmos_640-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_audio_ad_en_16ch_atmos_640.m3u8"
+
+##--eLive8 hvc_uhd (2040860-b) backup audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="hvc_uhd_audio_en_2ch_aac_128-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="hvc_uhd_audio_en_16ch_atmos_640-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="hvc_uhd_audio_en_2ch_aac_128-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="hvc_uhd_audio_en_16ch_atmos_640-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_audio_ad_en_16ch_atmos_640.m3u8"
+
+
+##--eLive11 dovi_uhd (2025513) primary audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="dovi_uhd_audio_en_2ch_aac_128-ak-p",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="dovi_uhd_audio_en_16ch_atmos_640-ak-p",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="dovi_uhd_audio_en_2ch_aac_128-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="dovi_uhd_audio_en_16ch_atmos_640-ak-p",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_audio_ad_en_16ch_atmos_640.m3u8"
+
+##--eLive12 dovi_uhd (2040862-b) backup audio--##
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="dovi_uhd_audio_en_2ch_aac_128-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_audio_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="dovi_uhd_audio_en_16ch_atmos_640-ak-b",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_audio_en_16ch_atmos_640.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="2",GROUP-ID="dovi_uhd_audio_en_2ch_aac_128-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_audio_ad_en_2ch_aac_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="en",NAME="English Audio Descriptions",DEFAULT=YES,AUTOSELECT=YES,CHANNELS="16/JOC",GROUP-ID="dovi_uhd_audio_en_16ch_atmos_640-ak-b",CHARACTERISTICS="public.accessibility.describes-video",URI="https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_audio_ad_en_16ch_atmos_640.m3u8"
+
+
+
+
+##--eLive1 avc_hd (2018335) primary video--##
+#EXT-X-STREAM-INF:BANDWIDTH=2884778,AVERAGE-BANDWIDTH=2132098,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_540p_2000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3394474,AVERAGE-BANDWIDTH=2642526,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_540p_2000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=4105070,AVERAGE-BANDWIDTH=3132013,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_720p_3000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4614766,AVERAGE-BANDWIDTH=3642441,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_720p_3000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1655093,AVERAGE-BANDWIDTH=1332156,VIDEO-RANGE=SDR,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_360p_1200.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2164789,AVERAGE-BANDWIDTH=1842584,VIDEO-RANGE=SDR,CODECS="avc1.4d401e,ec-3",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_360p_1200.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=5919073,AVERAGE-BANDWIDTH=4631853,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_720p_4500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=6428769,AVERAGE-BANDWIDTH=5142281,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_720p_4500.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=7835193,AVERAGE-BANDWIDTH=6131833,VIDEO-RANGE=SDR,CODECS="avc1.640028,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_1080p_6000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=8344889,AVERAGE-BANDWIDTH=6642261,VIDEO-RANGE=SDR,CODECS="avc1.640028,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_1080p_6000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=9761339,AVERAGE-BANDWIDTH=7632336,VIDEO-RANGE=SDR,CODECS="avc1.640028,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_1080p_7500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10271035,AVERAGE-BANDWIDTH=8142764,VIDEO-RANGE=SDR,CODECS="avc1.640028,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2018335/testing/hdr10_dovi81/avc_hd_1080p_7500.m3u8
+
+
+
+##--eLive2 avc_hd (2040784-b) backup video--##
+#EXT-X-STREAM-INF:BANDWIDTH=2884778,AVERAGE-BANDWIDTH=2132098,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_540p_2000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3394474,AVERAGE-BANDWIDTH=2642526,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_540p_2000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=4105070,AVERAGE-BANDWIDTH=3132013,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_720p_3000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4614766,AVERAGE-BANDWIDTH=3642441,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_720p_3000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1655093,AVERAGE-BANDWIDTH=1332156,VIDEO-RANGE=SDR,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_360p_1200.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2164789,AVERAGE-BANDWIDTH=1842584,VIDEO-RANGE=SDR,CODECS="avc1.4d401e,ec-3",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_360p_1200.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=5919073,AVERAGE-BANDWIDTH=4631853,VIDEO-RANGE=SDR,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_720p_4500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=6428769,AVERAGE-BANDWIDTH=5142281,VIDEO-RANGE=SDR,CODECS="avc1.64001f,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_720p_4500.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=7835193,AVERAGE-BANDWIDTH=6131833,VIDEO-RANGE=SDR,CODECS="avc1.640028,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_1080p_6000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=8344889,AVERAGE-BANDWIDTH=6642261,VIDEO-RANGE=SDR,CODECS="avc1.640028,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_1080p_6000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=9761339,AVERAGE-BANDWIDTH=7632336,VIDEO-RANGE=SDR,CODECS="avc1.640028,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_1080p_7500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10271035,AVERAGE-BANDWIDTH=8142764,VIDEO-RANGE=SDR,CODECS="avc1.640028,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="avc_hd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040784-b/testing/hdr10_dovi81/avc_hd_1080p_7500.m3u8
+
+
+
+
+##--eLive7 hvc_uhd (2025510) primary video--##
+#EXT-X-STREAM-INF:BANDWIDTH=3625094,AVERAGE-BANDWIDTH=3031989,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_720p_2900.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4134790,AVERAGE-BANDWIDTH=3542417,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_720p_2900.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1522507,AVERAGE-BANDWIDTH=1222159,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_360p_1090.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2032203,AVERAGE-BANDWIDTH=1732587,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_360p_1090.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=2492280,AVERAGE-BANDWIDTH=2062088,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_540p_1930.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3001976,AVERAGE-BANDWIDTH=2572516,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_540p_1930.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=5089597,AVERAGE-BANDWIDTH=4211920,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_720p_4080.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=5599293,AVERAGE-BANDWIDTH=4722348,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_720p_4080.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=8598286,AVERAGE-BANDWIDTH=7131683,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1080p_7000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=9107982,AVERAGE-BANDWIDTH=7642111,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1080p_7000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=6766917,AVERAGE-BANDWIDTH=5531811,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1080p_5400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=7276613,AVERAGE-BANDWIDTH=6042239,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1080p_5400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=9783515,AVERAGE-BANDWIDTH=8231702,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1440p_8100.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10293211,AVERAGE-BANDWIDTH=8742130,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,ec-3",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_1440p_8100.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=15721040,AVERAGE-BANDWIDTH=12543719,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_2160p_12500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=16230736,AVERAGE-BANDWIDTH=13054147,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,ec-3",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025510/testing/hdr10_dovi81/hvc_uhd_2160p_12500.m3u8
+
+
+
+##--eLive8 hvc_uhd (2040860-b) backup video--##
+#EXT-X-STREAM-INF:BANDWIDTH=3625094,AVERAGE-BANDWIDTH=3031989,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_720p_2900.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4134790,AVERAGE-BANDWIDTH=3542417,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_720p_2900.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1522507,AVERAGE-BANDWIDTH=1222159,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_360p_1090.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2032203,AVERAGE-BANDWIDTH=1732587,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_360p_1090.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=2492280,AVERAGE-BANDWIDTH=2062088,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_540p_1930.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3001976,AVERAGE-BANDWIDTH=2572516,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_540p_1930.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=5089597,AVERAGE-BANDWIDTH=4211920,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_720p_4080.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=5599293,AVERAGE-BANDWIDTH=4722348,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_720p_4080.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=8598286,AVERAGE-BANDWIDTH=7131683,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1080p_7000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=9107982,AVERAGE-BANDWIDTH=7642111,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1080p_7000.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=6766917,AVERAGE-BANDWIDTH=5531811,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1080p_5400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=7276613,AVERAGE-BANDWIDTH=6042239,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H120.B0,ec-3",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1080p_5400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=9783515,AVERAGE-BANDWIDTH=8231702,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1440p_8100.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10293211,AVERAGE-BANDWIDTH=8742130,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,ec-3",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_1440p_8100.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=15721040,AVERAGE-BANDWIDTH=12543719,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_2160p_12500.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=16230736,AVERAGE-BANDWIDTH=13054147,VIDEO-RANGE=SDR,CODECS="hvc1.2.4.H150.B0,ec-3",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="hvc_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040860-b/testing/hdr10_dovi81/hvc_uhd_2160p_12500.m3u8
+
+
+
+
+##--eLive11 dovi_uhd (2025513) primary video--##
+#EXT-X-STREAM-INF:BANDWIDTH=4384287,AVERAGE-BANDWIDTH=4010620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_720p_3400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4893983,AVERAGE-BANDWIDTH=4521048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_720p_3400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1843978,AVERAGE-BANDWIDTH=1700620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_360p_1300.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2353674,AVERAGE-BANDWIDTH=2211048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_360p_1300.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=3053650,AVERAGE-BANDWIDTH=2800620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_540p_2300.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3563346,AVERAGE-BANDWIDTH=3311048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_540p_2300.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=6077825,AVERAGE-BANDWIDTH=5550620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_720p_4800.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=6587521,AVERAGE-BANDWIDTH=6061048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_720p_4800.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=10432639,AVERAGE-BANDWIDTH=9510620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1080p_8400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10942335,AVERAGE-BANDWIDTH=10021048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1080p_8400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=8110071,AVERAGE-BANDWIDTH=7398620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1080p_6480.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=8619767,AVERAGE-BANDWIDTH=7909048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1080p_6480.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=12005210,AVERAGE-BANDWIDTH=10940620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.05/db1p",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1440p_9700.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=12514906,AVERAGE-BANDWIDTH=11451048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.05/db1p",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_1440p_9700.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=17085825,AVERAGE-BANDWIDTH=15560620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_2160p_13900.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=17595521,AVERAGE-BANDWIDTH=16071048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_2160p_13900.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=24464814,AVERAGE-BANDWIDTH=22270620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_2160p_20000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=24974510,AVERAGE-BANDWIDTH=22781048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-p",SUBTITLES="subs"
+https://events-live.apple.com/cmaf/live/2025513/testing/hdr10_dovi81/dovi_uhd_2160p_20000.m3u8
+
+
+
+##--eLive12 dovi_uhd (2040862-b) backup video--##
+#EXT-X-STREAM-INF:BANDWIDTH=4384287,AVERAGE-BANDWIDTH=4010620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_720p_3400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4893983,AVERAGE-BANDWIDTH=4521048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_720p_3400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=1843978,AVERAGE-BANDWIDTH=1700620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_360p_1300.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2353674,AVERAGE-BANDWIDTH=2211048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=640x360,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_360p_1300.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=3053650,AVERAGE-BANDWIDTH=2800620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_540p_2300.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3563346,AVERAGE-BANDWIDTH=3311048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.01/db1p",RESOLUTION=960x540,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_540p_2300.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=6077825,AVERAGE-BANDWIDTH=5550620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_720p_4800.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=6587521,AVERAGE-BANDWIDTH=6061048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.02/db1p",RESOLUTION=1280x720,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_720p_4800.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=10432639,AVERAGE-BANDWIDTH=9510620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1080p_8400.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=10942335,AVERAGE-BANDWIDTH=10021048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1080p_8400.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=8110071,AVERAGE-BANDWIDTH=7398620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1080p_6480.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=8619767,AVERAGE-BANDWIDTH=7909048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H120.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.04/db1p",RESOLUTION=1920x1080,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1080p_6480.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=12005210,AVERAGE-BANDWIDTH=10940620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.05/db1p",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1440p_9700.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=12514906,AVERAGE-BANDWIDTH=11451048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.05/db1p",RESOLUTION=2560x1440,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_1440p_9700.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=17085825,AVERAGE-BANDWIDTH=15560620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_2160p_13900.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=17595521,AVERAGE-BANDWIDTH=16071048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_2160p_13900.m3u8
+
+
+#EXT-X-STREAM-INF:BANDWIDTH=24464814,AVERAGE-BANDWIDTH=22270620,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,mp4a.40.2",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_2ch_aac_128-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_2160p_20000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=24974510,AVERAGE-BANDWIDTH=22781048,VIDEO-RANGE=PQ,CODECS="hvc1.2.4.H150.B0,ec-3",SUPPLEMENTAL-CODECS="dvh1.08.07/db1p",RESOLUTION=3840x2160,FRAME-RATE=29.97,AUDIO="dovi_uhd_audio_en_16ch_atmos_640-ak-b",SUBTITLES="subs"
+https://events-live-b.apple.com/cmaf/live/2040862-b/testing/hdr10_dovi81/dovi_uhd_2160p_20000.m3u8
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests brightcove_normal.m3u8 mode=add 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:BANDWIDTH=4292608,CODECS="avc1.640029,mp4a.40.2",RESOLUTION=1920x1080,SUBTITLES="subs"
+https://example.com/profile_0/chunklist.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2654208,CODECS="avc1.640029,mp4a.40.2",RESOLUTION=1280x720,SUBTITLES="subs"
+https://example.com/profile_1/chunklist.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1937408,CODECS="avc1.4d4029,mp4a.40.2",RESOLUTION=960x540,SUBTITLES="subs"
+https://example.com/profile_2/chunklist.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1118208,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=640x360,SUBTITLES="subs"
+https://example.com/profile_3/chunklist.m3u8
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests brightcove_normal.m3u8 mode=replace 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:BANDWIDTH=4292608,CODECS="avc1.640029,mp4a.40.2",RESOLUTION=1920x1080,SUBTITLES="subs"
+https://example.com/profile_0/chunklist.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2654208,CODECS="avc1.640029,mp4a.40.2",RESOLUTION=1280x720,SUBTITLES="subs"
+https://example.com/profile_1/chunklist.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1937408,CODECS="avc1.4d4029,mp4a.40.2",RESOLUTION=960x540,SUBTITLES="subs"
+https://example.com/profile_2/chunklist.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1118208,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=640x360,SUBTITLES="subs"
+https://example.com/profile_3/chunklist.m3u8
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests cbs.m3u8 mode=add 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:BANDWIDTH=1655093,AVERAGE-BANDWIDTH=1332156,SUBTITLES="subs"
+https://example.com/multivariant.m3u8
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests cbs.m3u8 mode=replace 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:BANDWIDTH=1655093,AVERAGE-BANDWIDTH=1332156,SUBTITLES="subs"
+https://example.com/multivariant.m3u8
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests cloudflare_normal.m3u8 mode=add 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:6
+#EXT-X-INDEPENDENT-SEGMENTS
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="group_audio",NAME="original",LANGUAGE="en-72902716",DEFAULT=YES,AUTOSELECT=YES,URI="https://example.com/stream_t7290271659383c7460bf8f744d309dad_r878760720.m3u8?useVODOTFE=false&llhlsHBs=0.9"
+#EXT-X-STREAM-INF:RESOLUTION=1920x1080,CODECS="avc1.640028,mp4a.40.2",BANDWIDTH=2013492,AVERAGE-BANDWIDTH=1780943,SCORE=5.0,FRAME-RATE=30.000,AUDIO="group_audio",SUBTITLES="subs"
+https://example.com/stream_t82a5a8e6d75c9ea4ffed16f7060082c3_r878760719.m3u8?useVODOTFE=false&llhlsHBs=0.9
+#EXT-X-STREAM-INF:RESOLUTION=1280x720,CODECS="avc1.64001f,mp4a.40.2",BANDWIDTH=1005221,AVERAGE-BANDWIDTH=900256,SCORE=4.0,FRAME-RATE=30.000,AUDIO="group_audio",SUBTITLES="subs"
+https://example.com/stream_t82a5a8e6d75c9ea4ffed16f7060082c3_r878760718.m3u8?useVODOTFE=false&llhlsHBs=0.9
+#EXT-X-STREAM-INF:RESOLUTION=854x480,CODECS="avc1.64001e,mp4a.40.2",BANDWIDTH=625344,AVERAGE-BANDWIDTH=529826,SCORE=3.0,FRAME-RATE=30.000,AUDIO="group_audio",SUBTITLES="subs"
+https://example.com/stream_t82a5a8e6d75c9ea4ffed16f7060082c3_r878760717.m3u8?useVODOTFE=false&llhlsHBs=0.9
+#EXT-X-STREAM-INF:RESOLUTION=640x360,CODECS="avc1.4d401e,mp4a.40.2",BANDWIDTH=543946,AVERAGE-BANDWIDTH=383928,SCORE=2.0,FRAME-RATE=30.000,AUDIO="group_audio",SUBTITLES="subs"
+https://example.com/stream_t82a5a8e6d75c9ea4ffed16f7060082c3_r878760716.m3u8?useVODOTFE=false&llhlsHBs=0.9
+#EXT-X-STREAM-INF:RESOLUTION=426x240,CODECS="avc1.42c015,mp4a.40.2",BANDWIDTH=330065,AVERAGE-BANDWIDTH=316506,SCORE=1.0,FRAME-RATE=30.000,AUDIO="group_audio",SUBTITLES="subs"
+https://example.com/stream_t82a5a8e6d75c9ea4ffed16f7060082c3_r878760715.m3u8?useVODOTFE=false&llhlsHBs=0.9
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests cloudflare_normal.m3u8 mode=replace 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:6
+#EXT-X-INDEPENDENT-SEGMENTS
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="group_audio",NAME="original",LANGUAGE="en-72902716",DEFAULT=YES,AUTOSELECT=YES,URI="https://example.com/stream_t7290271659383c7460bf8f744d309dad_r878760720.m3u8?useVODOTFE=false&llhlsHBs=0.9"
+#EXT-X-STREAM-INF:RESOLUTION=1920x1080,CODECS="avc1.640028,mp4a.40.2",BANDWIDTH=2013492,AVERAGE-BANDWIDTH=1780943,SCORE=5.0,FRAME-RATE=30.000,AUDIO="group_audio",SUBTITLES="subs"
+https://example.com/stream_t82a5a8e6d75c9ea4ffed16f7060082c3_r878760719.m3u8?useVODOTFE=false&llhlsHBs=0.9
+#EXT-X-STREAM-INF:RESOLUTION=1280x720,CODECS="avc1.64001f,mp4a.40.2",BANDWIDTH=1005221,AVERAGE-BANDWIDTH=900256,SCORE=4.0,FRAME-RATE=30.000,AUDIO="group_audio",SUBTITLES="subs"
+https://example.com/stream_t82a5a8e6d75c9ea4ffed16f7060082c3_r878760718.m3u8?useVODOTFE=false&llhlsHBs=0.9
+#EXT-X-STREAM-INF:RESOLUTION=854x480,CODECS="avc1.64001e,mp4a.40.2",BANDWIDTH=625344,AVERAGE-BANDWIDTH=529826,SCORE=3.0,FRAME-RATE=30.000,AUDIO="group_audio",SUBTITLES="subs"
+https://example.com/stream_t82a5a8e6d75c9ea4ffed16f7060082c3_r878760717.m3u8?useVODOTFE=false&llhlsHBs=0.9
+#EXT-X-STREAM-INF:RESOLUTION=640x360,CODECS="avc1.4d401e,mp4a.40.2",BANDWIDTH=543946,AVERAGE-BANDWIDTH=383928,SCORE=2.0,FRAME-RATE=30.000,AUDIO="group_audio",SUBTITLES="subs"
+https://example.com/stream_t82a5a8e6d75c9ea4ffed16f7060082c3_r878760716.m3u8?useVODOTFE=false&llhlsHBs=0.9
+#EXT-X-STREAM-INF:RESOLUTION=426x240,CODECS="avc1.42c015,mp4a.40.2",BANDWIDTH=330065,AVERAGE-BANDWIDTH=316506,SCORE=1.0,FRAME-RATE=30.000,AUDIO="group_audio",SUBTITLES="subs"
+https://example.com/stream_t82a5a8e6d75c9ea4ffed16f7060082c3_r878760715.m3u8?useVODOTFE=false&llhlsHBs=0.9
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests kaltura.m3u8 mode=add 1`] = `
+"#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=474086,RESOLUTION=480x312,CODECS="avc1.4d4015,mp4a.40.2",SUBTITLES="subs"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s33.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=678434,RESOLUTION=640x416,CODECS="avc1.4d401e,mp4a.40.2",SUBTITLES="subs"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s34.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=984956,RESOLUTION=640x416,CODECS="avc1.4d401e,mp4a.40.2",SUBTITLES="subs"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s35.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2750521,RESOLUTION=3024x1964,CODECS="avc1.42c033,mp4a.40.2",SUBTITLES="subs"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s32.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests kaltura.m3u8 mode=replace 1`] = `
+"#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=474086,RESOLUTION=480x312,CODECS="avc1.4d4015,mp4a.40.2",SUBTITLES="subs"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s33.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=678434,RESOLUTION=640x416,CODECS="avc1.4d401e,mp4a.40.2",SUBTITLES="subs"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s34.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=984956,RESOLUTION=640x416,CODECS="avc1.4d401e,mp4a.40.2",SUBTITLES="subs"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s35.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2750521,RESOLUTION=3024x1964,CODECS="avc1.42c033,mp4a.40.2",SUBTITLES="subs"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s32.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests nl_parliament.m3u8 mode=add 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:5
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Original Audio",LANGUAGE="qaa",DEFAULT=YES,AUTOSELECT=YES,URI="https://example.com/audio-6-128000/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls"
+#EXT-X-STREAM-INF:BANDWIDTH=453736,RESOLUTION=320x180,CODECS="avc1.4dc01f,mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/300/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=453736,RESOLUTION=320x180,CODECS="avc1.4dc01f",URI="https://example.com/300/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls&keyframes=1"
+#EXT-X-STREAM-INF:BANDWIDTH=555936,RESOLUTION=640x360,CODECS="avc1.4dc01f,mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/400/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=555936,RESOLUTION=640x360,CODECS="avc1.4dc01f",URI="https://example.com/400/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls&keyframes=1"
+#EXT-X-STREAM-INF:BANDWIDTH=1373536,RESOLUTION=960x540,CODECS="avc1.4dc01f,mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/1200/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=1373536,RESOLUTION=960x540,CODECS="avc1.4dc01f",URI="https://example.com/1200/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls&keyframes=1"
+#EXT-X-STREAM-INF:BANDWIDTH=2191136,RESOLUTION=1280x720,CODECS="avc1.640029,mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/2000/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=2191136,RESOLUTION=1280x720,CODECS="avc1.640029",URI="https://example.com/2000/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls&keyframes=1"
+#EXT-X-STREAM-INF:BANDWIDTH=4235136,RESOLUTION=1920x1080,CODECS="avc1.640029,mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/4000/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=4235136,RESOLUTION=1920x1080,CODECS="avc1.640029",URI="https://example.com/4000/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls&keyframes=1"
+#EXT-X-STREAM-INF:BANDWIDTH=138976,CODECS="mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/audio/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,FORCED=NO,URI="https://example.com/subtitles/nl_Live.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls",LANGUAGE="nl"
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests nl_parliament.m3u8 mode=replace 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:5
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Original Audio",LANGUAGE="qaa",DEFAULT=YES,AUTOSELECT=YES,URI="https://example.com/audio-6-128000/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls"
+#EXT-X-STREAM-INF:BANDWIDTH=453736,RESOLUTION=320x180,CODECS="avc1.4dc01f,mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/300/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=453736,RESOLUTION=320x180,CODECS="avc1.4dc01f",URI="https://example.com/300/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls&keyframes=1"
+#EXT-X-STREAM-INF:BANDWIDTH=555936,RESOLUTION=640x360,CODECS="avc1.4dc01f,mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/400/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=555936,RESOLUTION=640x360,CODECS="avc1.4dc01f",URI="https://example.com/400/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls&keyframes=1"
+#EXT-X-STREAM-INF:BANDWIDTH=1373536,RESOLUTION=960x540,CODECS="avc1.4dc01f,mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/1200/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=1373536,RESOLUTION=960x540,CODECS="avc1.4dc01f",URI="https://example.com/1200/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls&keyframes=1"
+#EXT-X-STREAM-INF:BANDWIDTH=2191136,RESOLUTION=1280x720,CODECS="avc1.640029,mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/2000/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=2191136,RESOLUTION=1280x720,CODECS="avc1.640029",URI="https://example.com/2000/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls&keyframes=1"
+#EXT-X-STREAM-INF:BANDWIDTH=4235136,RESOLUTION=1920x1080,CODECS="avc1.640029,mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/4000/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=4235136,RESOLUTION=1920x1080,CODECS="avc1.640029",URI="https://example.com/4000/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls&keyframes=1"
+#EXT-X-STREAM-INF:BANDWIDTH=138976,CODECS="mp4a.40.2",AUDIO="audio",SUBTITLES="subs"
+https://example.com/audio/prog_index.m3u8?sourcetimestamps=1&nocompression=1&returnType=hls
+# NOTE: Existing subtitles removed by CaptionHub
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests normal_mux.m3u8 mode=add 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:5
+#EXT-X-INDEPENDENT-SEGMENTS
+
+#EXT-X-STREAM-INF:BANDWIDTH=2493700,AVERAGE-BANDWIDTH=2493700,CODECS="mp4a.40.2,avc1.640020",RESOLUTION=1280x720,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/pGaLxyTcuJM2x01rtUNNZEcbRMUILGnwKeqTtmF9tL1Vv7GX4vQWKAzXw00H8DdJvmy02dES4900RPkCeW1dA8Z00KD6Rt7vBPGSRgt5CH2N4oTo/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfNmE1YjEyZGZkY2NmNzAzNDRmNjQwMTdhMDk3MmM3Njc0NDVlZjE3NzVhOTc0NzliMTVmMDMyNmZmMGNhY2E4ZA==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=1240800,AVERAGE-BANDWIDTH=1240800,CODECS="mp4a.40.2,avc1.64001f",RESOLUTION=854x480,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/mzeMXP9B66xFk02IEhaw00P02V91qb00v4uxs00YpDiwci02Cbsqcp5amnbgkvXbBRO9sDx02L7KX01uNlwVK02ckwBGXnWcQY58vEx248bGbvE7cKNM/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfNThkYjM4MDU0NDU1MzNlOGEyZGIwMzBjMDQ2MWI3YzY3MDg0YmRlYWY2YzdiNWRlYjYyYmIyYWMwY2M1YzA0NA==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=4712400,AVERAGE-BANDWIDTH=4712400,CODECS="mp4a.40.2,avc1.64002a",RESOLUTION=1920x1080,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/AkXYquTFEFaaz01zLoaxEWnBbeKF00G9GvFj14wdeMaZ00KY00AgtnMFyuFMQGxFHx5T6GpAtutpjkUXkiQ3yTUM3OH8sW4zW3cI/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfOWJkNjJhZmZhOTZhYmMwMWRlZTZiNjc5OGMwM2QzZWY5YWEyZTcyODYxNzdhN2E1NWNkNTc3YzdkY2VhYWFmYg==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=595100,AVERAGE-BANDWIDTH=595100,CODECS="mp4a.40.2,avc1.64001e",RESOLUTION=480x270,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/p4ZSltb502dl02DDWQbOdLw02uj01KgKEfNmAO4qfkj12yfGIAGgW6SwyCUHjxODqaiiYV02jwjHE48UjBpwHKs500uW9MitbDWc7V/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfODQ5MzEyNzg0ZDM2NWMwNzM1MDA4Y2YyODkzY2E1MTRjYmUzMmE1MmJhNWMyYTE3ZjQ1MzU1MTFiNTQ1MWVjZQ==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests normal_mux.m3u8 mode=replace 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:5
+#EXT-X-INDEPENDENT-SEGMENTS
+
+#EXT-X-STREAM-INF:BANDWIDTH=2493700,AVERAGE-BANDWIDTH=2493700,CODECS="mp4a.40.2,avc1.640020",RESOLUTION=1280x720,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/pGaLxyTcuJM2x01rtUNNZEcbRMUILGnwKeqTtmF9tL1Vv7GX4vQWKAzXw00H8DdJvmy02dES4900RPkCeW1dA8Z00KD6Rt7vBPGSRgt5CH2N4oTo/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfNmE1YjEyZGZkY2NmNzAzNDRmNjQwMTdhMDk3MmM3Njc0NDVlZjE3NzVhOTc0NzliMTVmMDMyNmZmMGNhY2E4ZA==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=1240800,AVERAGE-BANDWIDTH=1240800,CODECS="mp4a.40.2,avc1.64001f",RESOLUTION=854x480,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/mzeMXP9B66xFk02IEhaw00P02V91qb00v4uxs00YpDiwci02Cbsqcp5amnbgkvXbBRO9sDx02L7KX01uNlwVK02ckwBGXnWcQY58vEx248bGbvE7cKNM/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfNThkYjM4MDU0NDU1MzNlOGEyZGIwMzBjMDQ2MWI3YzY3MDg0YmRlYWY2YzdiNWRlYjYyYmIyYWMwY2M1YzA0NA==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=4712400,AVERAGE-BANDWIDTH=4712400,CODECS="mp4a.40.2,avc1.64002a",RESOLUTION=1920x1080,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/AkXYquTFEFaaz01zLoaxEWnBbeKF00G9GvFj14wdeMaZ00KY00AgtnMFyuFMQGxFHx5T6GpAtutpjkUXkiQ3yTUM3OH8sW4zW3cI/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfOWJkNjJhZmZhOTZhYmMwMWRlZTZiNjc5OGMwM2QzZWY5YWEyZTcyODYxNzdhN2E1NWNkNTc3YzdkY2VhYWFmYg==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=595100,AVERAGE-BANDWIDTH=595100,CODECS="mp4a.40.2,avc1.64001e",RESOLUTION=480x270,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/p4ZSltb502dl02DDWQbOdLw02uj01KgKEfNmAO4qfkj12yfGIAGgW6SwyCUHjxODqaiiYV02jwjHE48UjBpwHKs500uW9MitbDWc7V/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfODQ5MzEyNzg0ZDM2NWMwNzM1MDA4Y2YyODkzY2E1MTRjYmUzMmE1MmJhNWMyYTE3ZjQ1MzU1MTFiNTQ1MWVjZQ==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests normal_mux_for_substream.m3u8 mode=add 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:5
+#EXT-X-INDEPENDENT-SEGMENTS
+
+#EXT-X-STREAM-INF:BANDWIDTH=2493700,AVERAGE-BANDWIDTH=2493700,CODECS="mp4a.40.2,avc1.640020",RESOLUTION=1280x720,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/pGaLxyTcuJM2x01rtUNNZEcbRMUILGnwKeqTtmF9tL1Vv7GX4vQWKAzXw00H8DdJvmy02dES4900RPkCeW1dA8Z00KD6Rt7vBPGSRgt5CH2N4oTo/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfNmE1YjEyZGZkY2NmNzAzNDRmNjQwMTdhMDk3MmM3Njc0NDVlZjE3NzVhOTc0NzliMTVmMDMyNmZmMGNhY2E4ZA==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=1240800,AVERAGE-BANDWIDTH=1240800,CODECS="mp4a.40.2,avc1.64001f",RESOLUTION=854x480,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/mzeMXP9B66xFk02IEhaw00P02V91qb00v4uxs00YpDiwci02Cbsqcp5amnbgkvXbBRO9sDx02L7KX01uNlwVK02ckwBGXnWcQY58vEx248bGbvE7cKNM/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfNThkYjM4MDU0NDU1MzNlOGEyZGIwMzBjMDQ2MWI3YzY3MDg0YmRlYWY2YzdiNWRlYjYyYmIyYWMwY2M1YzA0NA==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=4712400,AVERAGE-BANDWIDTH=4712400,CODECS="mp4a.40.2,avc1.64002a",RESOLUTION=1920x1080,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/AkXYquTFEFaaz01zLoaxEWnBbeKF00G9GvFj14wdeMaZ00KY00AgtnMFyuFMQGxFHx5T6GpAtutpjkUXkiQ3yTUM3OH8sW4zW3cI/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfOWJkNjJhZmZhOTZhYmMwMWRlZTZiNjc5OGMwM2QzZWY5YWEyZTcyODYxNzdhN2E1NWNkNTc3YzdkY2VhYWFmYg==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=595100,AVERAGE-BANDWIDTH=595100,CODECS="mp4a.40.2,avc1.64001e",RESOLUTION=480x270,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/p4ZSltb502dl02DDWQbOdLw02uj01KgKEfNmAO4qfkj12yfGIAGgW6SwyCUHjxODqaiiYV02jwjHE48UjBpwHKs500uW9MitbDWc7V/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfODQ5MzEyNzg0ZDM2NWMwNzM1MDA4Y2YyODkzY2E1MTRjYmUzMmE1MmJhNWMyYTE3ZjQ1MzU1MTFiNTQ1MWVjZQ==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests normal_mux_for_substream.m3u8 mode=replace 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:5
+#EXT-X-INDEPENDENT-SEGMENTS
+
+#EXT-X-STREAM-INF:BANDWIDTH=2493700,AVERAGE-BANDWIDTH=2493700,CODECS="mp4a.40.2,avc1.640020",RESOLUTION=1280x720,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/pGaLxyTcuJM2x01rtUNNZEcbRMUILGnwKeqTtmF9tL1Vv7GX4vQWKAzXw00H8DdJvmy02dES4900RPkCeW1dA8Z00KD6Rt7vBPGSRgt5CH2N4oTo/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfNmE1YjEyZGZkY2NmNzAzNDRmNjQwMTdhMDk3MmM3Njc0NDVlZjE3NzVhOTc0NzliMTVmMDMyNmZmMGNhY2E4ZA==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=1240800,AVERAGE-BANDWIDTH=1240800,CODECS="mp4a.40.2,avc1.64001f",RESOLUTION=854x480,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/mzeMXP9B66xFk02IEhaw00P02V91qb00v4uxs00YpDiwci02Cbsqcp5amnbgkvXbBRO9sDx02L7KX01uNlwVK02ckwBGXnWcQY58vEx248bGbvE7cKNM/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfNThkYjM4MDU0NDU1MzNlOGEyZGIwMzBjMDQ2MWI3YzY3MDg0YmRlYWY2YzdiNWRlYjYyYmIyYWMwY2M1YzA0NA==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=4712400,AVERAGE-BANDWIDTH=4712400,CODECS="mp4a.40.2,avc1.64002a",RESOLUTION=1920x1080,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/AkXYquTFEFaaz01zLoaxEWnBbeKF00G9GvFj14wdeMaZ00KY00AgtnMFyuFMQGxFHx5T6GpAtutpjkUXkiQ3yTUM3OH8sW4zW3cI/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfOWJkNjJhZmZhOTZhYmMwMWRlZTZiNjc5OGMwM2QzZWY5YWEyZTcyODYxNzdhN2E1NWNkNTc3YzdkY2VhYWFmYg==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+#EXT-X-STREAM-INF:BANDWIDTH=595100,AVERAGE-BANDWIDTH=595100,CODECS="mp4a.40.2,avc1.64001e",RESOLUTION=480x270,CLOSED-CAPTIONS=NONE,SUBTITLES="subs"
+https://manifest-gcp-us-east4-vop1.cfcdn.mux.com/p4ZSltb502dl02DDWQbOdLw02uj01KgKEfNmAO4qfkj12yfGIAGgW6SwyCUHjxODqaiiYV02jwjHE48UjBpwHKs500uW9MitbDWc7V/rendition.m3u8?cdn=cloudflare&exclude_pdt=false&expires=1729774800&live=1&skid=default&signature=NjcxYTQ0ZDBfODQ5MzEyNzg0ZDM2NWMwNzM1MDA4Y2YyODkzY2E1MTRjYmUzMmE1MmJhNWMyYTE3ZjQ1MzU1MTFiNTQ1MWVjZQ==&vsid=OAdGHPx1SGwX02VOFMZo8y2Dn00lQmodjTCIggeysw401ZmPZIUFg9ifmHAk3901p2ocBENs0102xuO3I
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests playlist_with_existing.m3u8 mode=add 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:4
+#EXT-X-INDEPENDENT-SEGMENTS
+#EXT-X-STREAM-INF:BANDWIDTH=1672000,AVERAGE-BANDWIDTH=1460800,VIDEO-RANGE=SDR,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=50.000,AUDIO="program_audio",SUBTITLES="subs",HDCP-LEVEL=NONE
+https://example.com/master_640p_1200.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=6520800,AVERAGE-BANDWIDTH=5640800,VIDEO-RANGE=SDR,CODECS="avc1.64002a,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=50.000,AUDIO="program_audio",SUBTITLES="subs",HDCP-LEVEL=NONE
+https://example.com/master_1920p_5000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4224000,AVERAGE-BANDWIDTH=3660800,VIDEO-RANGE=SDR,CODECS="avc1.640020,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=50.000,AUDIO="program_audio",SUBTITLES="subs",HDCP-LEVEL=NONE
+https://example.com/master_1280p_3200.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2182400,AVERAGE-BANDWIDTH=1900800,VIDEO-RANGE=SDR,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=50.000,AUDIO="program_audio",SUBTITLES="subs",HDCP-LEVEL=NONE
+https://example.com/master_960p_1600.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1034000,AVERAGE-BANDWIDTH=910800,VIDEO-RANGE=SDR,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=480x270,FRAME-RATE=50.000,AUDIO="program_audio",SUBTITLES="subs",HDCP-LEVEL=NONE
+https://example.com/master_480p_700.m3u8
+#EXT-X-MEDIA:TYPE=SUBTITLES,NAME="Deutsch",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="de",GROUP-ID="subs",URI="https://example.com/master_subs_webvtt.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="de",NAME="Deutsch",AUTOSELECT=YES,DEFAULT=YES,GROUP-ID="program_audio",URI="https://example.com/master_audio1_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="klare sprache",NAME="Klare Sprache",AUTOSELECT=YES,DEFAULT=NO,GROUP-ID="program_audio",URI="https://example.com/master_audio2_KS_128.m3u8"
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests playlist_with_existing.m3u8 mode=replace 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:4
+#EXT-X-INDEPENDENT-SEGMENTS
+#EXT-X-STREAM-INF:BANDWIDTH=1672000,AVERAGE-BANDWIDTH=1460800,VIDEO-RANGE=SDR,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=50.000,AUDIO="program_audio",SUBTITLES="subs",HDCP-LEVEL=NONE
+https://example.com/master_640p_1200.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=6520800,AVERAGE-BANDWIDTH=5640800,VIDEO-RANGE=SDR,CODECS="avc1.64002a,mp4a.40.2",RESOLUTION=1920x1080,FRAME-RATE=50.000,AUDIO="program_audio",SUBTITLES="subs",HDCP-LEVEL=NONE
+https://example.com/master_1920p_5000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=4224000,AVERAGE-BANDWIDTH=3660800,VIDEO-RANGE=SDR,CODECS="avc1.640020,mp4a.40.2",RESOLUTION=1280x720,FRAME-RATE=50.000,AUDIO="program_audio",SUBTITLES="subs",HDCP-LEVEL=NONE
+https://example.com/master_1280p_3200.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2182400,AVERAGE-BANDWIDTH=1900800,VIDEO-RANGE=SDR,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=50.000,AUDIO="program_audio",SUBTITLES="subs",HDCP-LEVEL=NONE
+https://example.com/master_960p_1600.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1034000,AVERAGE-BANDWIDTH=910800,VIDEO-RANGE=SDR,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=480x270,FRAME-RATE=50.000,AUDIO="program_audio",SUBTITLES="subs",HDCP-LEVEL=NONE
+https://example.com/master_480p_700.m3u8
+# NOTE: Existing subtitles removed by CaptionHub
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="de",NAME="Deutsch",AUTOSELECT=YES,DEFAULT=YES,GROUP-ID="program_audio",URI="https://example.com/master_audio1_128.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,LANGUAGE="klare sprache",NAME="Klare Sprache",AUTOSELECT=YES,DEFAULT=NO,GROUP-ID="program_audio",URI="https://example.com/master_audio2_KS_128.m3u8"
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests wowza_cloud.m3u8 mode=add 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:BANDWIDTH=4128000,CODECS="avc1.66.51,mp4a.40.2",RESOLUTION=3024x1964,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b4128000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2988000,CODECS="avc1.100.41,mp4a.40.2",RESOLUTION=1108x720,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b2728000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1888000,CODECS="avc1.77.40,mp4a.40.2",RESOLUTION=740x480,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b1728000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1254400,CODECS="avc1.77.32,mp4a.40.2",RESOLUTION=554x360,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b1152000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=691200,CODECS="avc1.66.30,mp4a.40.2",RESOLUTION=444x288,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b640000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=480000,CODECS="avc1.66.30,mp4a.40.2",RESOLUTION=278x180,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b448000.m3u8
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;
+
+exports[`rewriter against test_hls_manifests wowza_cloud.m3u8 mode=replace 1`] = `
+"#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:BANDWIDTH=4128000,CODECS="avc1.66.51,mp4a.40.2",RESOLUTION=3024x1964,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b4128000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2988000,CODECS="avc1.100.41,mp4a.40.2",RESOLUTION=1108x720,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b2728000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1888000,CODECS="avc1.77.40,mp4a.40.2",RESOLUTION=740x480,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b1728000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1254400,CODECS="avc1.77.32,mp4a.40.2",RESOLUTION=554x360,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b1152000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=691200,CODECS="avc1.66.30,mp4a.40.2",RESOLUTION=444x288,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b640000.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=480000,CODECS="avc1.66.30,mp4a.40.2",RESOLUTION=278x180,SUBTITLES="subs"
+https://example.com/chunklist_w1280774953_b448000.m3u8
+
+
+# NOTE: the following captions are added by CaptionHub:
+
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://captions.example.com/streams/abc/en.m3u8",CHARACTERISTICS="public.machine-generated"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Nederlands",DEFAULT=NO,AUTOSELECT=YES,FORCED=NO,LANGUAGE="nl",URI="https://captions.example.com/streams/abc/nl.m3u8",CHARACTERISTICS="public.machine-generated"
+"
+`;

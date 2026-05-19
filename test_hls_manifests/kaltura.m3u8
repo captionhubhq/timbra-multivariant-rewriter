@@ -1,0 +1,9 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=474086,RESOLUTION=480x312,CODECS="avc1.4d4015,mp4a.40.2"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s33.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=678434,RESOLUTION=640x416,CODECS="avc1.4d401e,mp4a.40.2"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s34.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=984956,RESOLUTION=640x416,CODECS="avc1.4d401e,mp4a.40.2"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s35.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2750521,RESOLUTION=3024x1964,CODECS="avc1.42c033,mp4a.40.2"
+https://klive.kaltura.com/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s32.m3u8?__hdnea__=st=1758136296~exp=1758222696~acl=/s/env/d.live.nvp1/live/hls/p/6318723/e/1_ve22zxhk/tl/viewer/st/0/t/2cVMxtU7oZ9CdMVcLnHeOA/index-s3*~hmac=d1e87a5c84544d8037ff6483f62ee3505568d4027e10a2efb5e263040b7b3921
