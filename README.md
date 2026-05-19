@@ -75,3 +75,34 @@ npm run build   # tsc → dist/
 ```
 
 To refresh snapshots after a logic change: `npx jest -u`.
+
+### Try the Lambda locally
+
+`scripts/local.ts` boots an HTTP server on `localhost:4444` that wraps the
+Lambda handler — every request is turned into an API Gateway v2 event and
+piped through `handler()`, so it exercises the real proxy + rewriter code.
+
+```sh
+npm run dev
+curl -s http://localhost:4444/ | head -30
+```
+
+The script ships with example defaults pointing at Mux's public
+[Tears of Steel test stream](https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8)
+(a five-bitrate multivariant manifest with relative URIs and no existing
+subtitle tracks) and two placeholder CaptionHub subtitle URLs, so it
+works out of the box with no setup. Fetch the raw upstream playlist to
+compare against the rewritten output:
+
+```sh
+curl -s https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+```
+
+Override any field by exporting the relevant env var before `npm run dev`:
+
+```sh
+PLAYLIST_URL=https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8 \
+  SUBTITLE_PLAYLISTS='[{"label":"EN","language":"en","default":true,"url":"https://captions.example.com/en.m3u8"}]' \
+  MODE=add \
+  npm run dev
+```
