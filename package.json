@@ -1,12 +1,16 @@
 {
   "name": "timbra-multivariant-rewriter",
   "version": "1.0.0",
-  "description": "AWS Lambda that rewrites a multivariant HLS playlist to add subtitle tracks.",
+  "description": "Rewrites a multivariant HLS playlist to add subtitle tracks, as an AWS Lambda or a CLI.",
   "main": "dist/index.js",
+  "bin": {
+    "timbra-rewrite": "dist/cli.js"
+  },
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "dev": "tsx scripts/local.ts"
+    "dev": "tsx scripts/local.ts",
+    "rewrite": "tsx src/cli.ts"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.145",

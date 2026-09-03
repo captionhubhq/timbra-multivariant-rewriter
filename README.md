@@ -15,7 +15,9 @@ a player that must not be repointed at a third-party host. This Lambda
 covers that case.
 
 The Lambda's configuration is the flow's API representation, so setting
-it up is a copy-and-paste job:
+it up is a copy-and-paste job. (For a playlist that never changes, the
+[command-line tool](#rewrite-once-from-the-command-line) does the same
+rewrite without deploying anything.)
 
 1. Fetch the flow from the CaptionHub API
    ([Get flow](https://api-docs.captionhub.com/docs/captionhub/659557c352a16-get-flow)).
@@ -83,6 +85,48 @@ it up is a copy-and-paste job:
 If the flow's languages change, fetch the flow again and update
 `SUBTITLE_PLAYLISTS`. The Lambda does not call the CaptionHub API
 itself.
+
+## Rewrite once from the command line
+
+The same rewriting is available as a CLI for cases where a Lambda is
+overkill: a VOD asset whose playlist never changes, a one-off check of
+what the output will look like, or a build step that writes the playlist
+to a static host. Run it from a checkout with `npm run rewrite --`, or
+install it globally with `npm install -g .` to get a `timbra-rewrite`
+command.
+
+```sh
+# Fetch the source playlist and add tracks from a JSON file
+npm run rewrite -- \
+  --playlist https://hls.example.com/live/stream.m3u8 \
+  --subtitles tracks.json
+
+# Pipe the tracks straight from the CaptionHub API
+curl -s -H "Authorization: $CAPTIONHUB_API_TOKEN" \
+    https://api.captionhub.com/v1/timbra/<flow_id> \
+  | jq -c '.output_details.hls_output.playlist_tracks' \
+  | npm run rewrite -- --playlist https://hls.example.com/live/stream.m3u8 --subtitles -
+
+# Rewrite a local file and write the result next to it
+npm run rewrite -- \
+  --playlist ./master.m3u8 \
+  --base-url https://hls.example.com/vod/master.m3u8 \
+  --subtitles tracks.json \
+  --output ./master_with_captions.m3u8
+```
+
+| Flag | Meaning |
+| --- | --- |
+| `--playlist <url\|file\|->` | Source playlist. An http(s) URL is fetched with the same timeout and validation as the Lambda; anything else is read as a file, `-` reads stdin. |
+| `--base-url <url>` | Where the source playlist is served from. Required for a file or stdin, since relative URIs are resolved against it. Optional for a URL, where it overrides the fetched URL. |
+| `--subtitles <file\|json\|->` | Tracks as a JSON file, an inline JSON array, or `-` for stdin. Same shape and validation as `SUBTITLE_PLAYLISTS`. |
+| `--mode <add\|replace>` | Same as the `MODE` env var. Defaults to `add`. |
+| `--output <file>` | Write to a file instead of stdout. |
+
+Exit status is 0 on success, 2 for a usage or configuration error, and 1
+when the fetch fails or the input is not an HLS playlist. Unlike the
+Lambda, the output is a snapshot: rerun the command when the source
+playlist or the flow's tracks change.
 
 ## Configuration
 
