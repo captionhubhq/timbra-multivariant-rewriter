@@ -6,13 +6,27 @@ absolutised so the response stands on its own from any origin.
 
 ## Typical use case
 
-A CaptionHub Timbra flow with HLS output publishes one VTT playlist per
-caption language. CaptionHub also hosts a rewritten multivariant playlist
-that already references those tracks (`modified_multivariant_url` in the
-API). Some teams prefer to serve that playlist from infrastructure they
-control instead: their own domain and CDN, their own access controls, or
-a player that must not be repointed at a third-party host. This Lambda
-covers that case.
+A CaptionHub Timbra flow with
+[HLS output](https://support.captionhub.com/timbra/anHrwmAnQCHCsf4DjG5uGX/introduction-to-hls-output/3dXFPaRPW6sRmxQg2CPBBX)
+publishes one WebVTT playlist per caption language. The knowledge base
+describes two ways to get those into a player:
+[edit your own multivariant playlist](https://support.captionhub.com/timbra/anHrwmAnQCHCsf4DjG5uGX/integrate-captions-into-your-hls-manifest/38A8ShVEARoBJqhfcLUBjf),
+or point the player at the
+[modified manifest CaptionHub hosts](https://support.captionhub.com/timbra/anHrwmAnQCHCsf4DjG5uGX/use-a-modified-hls-manifest-from-captionhub/38A8ShVEAPqYPACV97Gvq9)
+(`modified_multivariant_url` in the API). This repository is a third
+option for teams that want the rewrite done automatically but served
+from infrastructure they control: their own domain and CDN, their own
+access controls, or a player that must not be repointed at a third-party
+host.
+
+Two differences from the hosted manifest are worth knowing:
+
+- The hosted manifest only lists subtitle tracks while a flow is
+  actively captioning, which the knowledge base notes can make Safari and
+  iOS drop captions and switch rendition. This rewriter always lists the
+  configured tracks, so the player's view of the playlist is stable.
+- The hosted manifest picks up language changes on its own. Here the
+  tracks are configuration, so they must be refreshed by hand.
 
 The Lambda's configuration is the flow's API representation, so setting
 it up is a copy-and-paste job. (For a playlist that never changes, the
@@ -21,7 +35,10 @@ rewrite without deploying anything.)
 
 1. Fetch the flow from the CaptionHub API
    ([Get flow](https://api-docs.captionhub.com/docs/captionhub/659557c352a16-get-flow)).
-   The token comes from your team's API settings.
+   The token comes from the API tab in your team settings; see
+   [Create an API key](https://support.captionhub.com/developers/4fuH3UnM2RNWB81Y6NEHgg/create-an-api-key/4fuH3UnM2TMshgmtLt4DNy).
+   The same URLs are shown in the CaptionHub UI under **HLS
+   integration** on the flow.
 
    ```sh
    curl -s -H "Authorization: $CAPTIONHUB_API_TOKEN" \
@@ -160,6 +177,11 @@ unchanged (see [Typical use case](#typical-use-case)):
 ]
 ```
 
+Each entry becomes one `EXT-X-MEDIA` tag, with the attributes the
+knowledge base recommends in
+[Integrate captions into your HLS manifest](https://support.captionhub.com/timbra/anHrwmAnQCHCsf4DjG5uGX/integrate-captions-into-your-hls-manifest/38A8ShVEARoBJqhfcLUBjf),
+and every `EXT-X-STREAM-INF` line gains `SUBTITLES="subs"`.
+
 | Key | Required | Used for |
 | --- | --- | --- |
 | `language_name` | yes | `NAME` attribute of the `EXT-X-MEDIA` tag. |
@@ -210,6 +232,13 @@ always issues a clean upstream request.
 
 ### Limitations
 
+- **One subtitle group for all variants.** Every track goes into
+  `GROUP-ID="subs"` and every variant references that group. The
+  knowledge base's
+  [redundant stream setup](https://support.captionhub.com/timbra/anHrwmAnQCHCsf4DjG5uGX/recommendations-for-a-redundant-stream/5GDESEkCzbveVXsmdRATwm),
+  where primary and backup renditions point at different caption
+  projects via different group IDs, is not expressible with this
+  configuration.
 - **Redirects on `PLAYLIST_URL` are not fully handled.** The upstream
   fetch follows `3xx` hops, but relative URIs inside the playlist are
   resolved against the configured `PLAYLIST_URL`, not the post-redirect
@@ -218,6 +247,16 @@ always issues a clean upstream request.
   geo-routing or signed-URL handoffs), the rewritten segment URLs will
   point at the wrong origin. Workaround: configure `PLAYLIST_URL` with
   the final, non-redirecting URL.
+
+## Further reading
+
+- [Timbra knowledge base](https://support.captionhub.com/timbra/anHrwmAnQCHCsf4DjG5uGX),
+  in particular the "Output: captions via HLS integration" collection.
+- [Using a HLS feed as a source](https://support.captionhub.com/timbra/anHrwmAnQCHCsf4DjG5uGX/using-a-hls-feed-as-a-source/389b3dFua53GBBnXcWWxf7):
+  requirements the source stream behind `PLAYLIST_URL` has to meet.
+- [Introduction to HLS output](https://support.captionhub.com/timbra/anHrwmAnQCHCsf4DjG5uGX/introduction-to-hls-output/3dXFPaRPW6sRmxQg2CPBBX):
+  players known to work with WebVTT subtitle tracks.
+- [CaptionHub API reference](https://api-docs.captionhub.com/docs/captionhub/b0fb6beb9cd7e-caption-hub-api).
 
 ## Develop
 
