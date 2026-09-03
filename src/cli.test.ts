@@ -20,14 +20,47 @@ interface Capture {
   stderr: string[];
 }
 
-function run(argv: string[], options: { stdin?: string; upstream?: UpstreamResponse } = {}) {
+interface RunOptions {
+  stdin?: string;
+  upstream?: UpstreamResponse;
+  flows?: Record<string, unknown>;
+  env?: NodeJS.ProcessEnv;
+}
+
+function flowResponse(flowId: string, sourceUrl: string, languages: string[]) {
+  return {
+    flow_id: flowId,
+    hls_details: { hls_url: sourceUrl, hls_transcription_url: null },
+    output_details: {
+      hls_output: {
+        modified_multivariant_url: `https://hls.captionhub.com/live/modified_multivariant/${flowId}.m3u8`,
+        playlist_tracks: languages.map((code, i) => ({
+          language_name: code.toUpperCase(),
+          default: i === 0,
+          language_code: code,
+          url: `https://cdn.captionhub.com/live/vtt/playlist/${code}/${flowId}.m3u8`,
+        })),
+      },
+    },
+  };
+}
+
+function run(argv: string[], options: RunOptions = {}) {
   const capture: Capture = { stdout: [], stderr: [] };
   const exit = runCli(argv, {
     stdout: (text) => capture.stdout.push(text),
     stderr: (text) => capture.stderr.push(text),
     readStdin: () => options.stdin ?? "",
+    env: options.env ?? {},
     fetcher: async () =>
       options.upstream ?? { status: 200, body: fs.readFileSync(MANIFEST, "utf8"), headers: {} },
+    apiFetch: async (url) => {
+      const flowId = url.split("/").pop() ?? "";
+      const flow = options.flows?.[flowId];
+      return flow
+        ? new Response(JSON.stringify(flow), { status: 200 })
+        : new Response("Not found", { status: 404 });
+    },
   });
   return exit.then((code) => ({ code, out: capture.stdout.join(""), err: capture.stderr.join("") }));
 }
@@ -113,7 +146,7 @@ describe("timbra-rewrite CLI", () => {
     const result = await run(["--playlist", "-", "--base-url", "https://x.example.com/m.m3u8", "--subtitles", "-"]);
 
     expect(result.code).toBe(ExitCode.UsageError);
-    expect(result.err).toContain("cannot both read stdin");
+    expect(result.err).toContain("can read stdin");
   });
 
   test("reports invalid tracks as a usage error", async () => {
@@ -152,5 +185,95 @@ describe("timbra-rewrite CLI", () => {
 
     expect(result.code).toBe(ExitCode.RewriteFailed);
     expect(result.err).toContain("not an HLS playlist");
+  });
+
+  describe("with CaptionHub flows", () => {
+    test("--flow supplies both the source playlist and the tracks", async () => {
+      const result = await run(["--flow", "aaa", "--token", "tok"], {
+        flows: { aaa: flowResponse("aaa", "https://origin.example.com/live/master.m3u8", ["en", "nl"]) },
+      });
+
+      expect(result.code).toBe(ExitCode.Ok);
+      expect(result.out).toContain("https://origin.example.com/live/profile_0/chunklist.m3u8");
+      expect(result.out).toContain('LANGUAGE="en",URI="https://cdn.captionhub.com/live/vtt/playlist/en/aaa.m3u8"');
+      expect(result.out).toContain('LANGUAGE="nl"');
+    });
+
+    test("takes the token from the environment", async () => {
+      const result = await run(["--flow", "aaa"], {
+        env: { CAPTIONHUB_API_TOKEN: "tok" },
+        flows: { aaa: flowResponse("aaa", "https://origin.example.com/m.m3u8", ["en"]) },
+      });
+
+      expect(result.code).toBe(ExitCode.Ok);
+    });
+
+    test("a local playlist borrows the base URL from the flow", async () => {
+      const result = await run(["--flow", "aaa", "--token", "tok", "--playlist", MANIFEST], {
+        flows: { aaa: flowResponse("aaa", "https://origin.example.com/vod/master.m3u8", ["en"]) },
+      });
+
+      expect(result.code).toBe(ExitCode.Ok);
+      expect(result.out).toContain("https://origin.example.com/vod/profile_0/chunklist.m3u8");
+    });
+
+    test("--subtitles overrides the flow's tracks", async () => {
+      const result = await run(["--flow", "aaa", "--token", "tok", "--subtitles", API_TRACKS], {
+        flows: { aaa: flowResponse("aaa", "https://origin.example.com/m.m3u8", ["fr"]) },
+      });
+
+      expect(result.code).toBe(ExitCode.Ok);
+      expect(result.out).toContain('LANGUAGE="en"');
+      expect(result.out).not.toContain('LANGUAGE="fr"');
+    });
+
+    test("--flows assigns groups and variant patterns per flow", async () => {
+      const redundant = [
+        "#EXTM3U",
+        "#EXT-X-STREAM-INF:BANDWIDTH=2000000,RESOLUTION=1280x720",
+        "https://primary.example.com/medium.m3u8",
+        "#EXT-X-STREAM-INF:BANDWIDTH=2000000,RESOLUTION=1280x720",
+        "https://backup.example.com/medium.m3u8",
+        "",
+      ].join("\n");
+
+      const result = await run(
+        [
+          "--playlist", "https://origin.example.com/master.m3u8",
+          "--token", "tok",
+          "--flows", JSON.stringify([
+            { flow_id: "aaa", group_id: "primary-captions", variant_pattern: "^https://primary\\." },
+            { flow_id: "bbb", group_id: "backup-captions", variant_pattern: "^https://backup\\." },
+          ]),
+        ],
+        {
+          upstream: { status: 200, body: redundant, headers: {} },
+          flows: {
+            aaa: flowResponse("aaa", "https://origin.example.com/master.m3u8", ["en"]),
+            bbb: flowResponse("bbb", "https://origin.example.com/master.m3u8", ["en"]),
+          },
+        },
+      );
+
+      expect(result.code).toBe(ExitCode.Ok);
+      expect(result.out).toContain('RESOLUTION=1280x720,SUBTITLES="primary-captions"\nhttps://primary.example.com/medium.m3u8');
+      expect(result.out).toContain('RESOLUTION=1280x720,SUBTITLES="backup-captions"\nhttps://backup.example.com/medium.m3u8');
+      expect(result.out).toContain('GROUP-ID="primary-captions",NAME="EN",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://cdn.captionhub.com/live/vtt/playlist/en/aaa.m3u8"');
+      expect(result.out).toContain('GROUP-ID="backup-captions",NAME="EN",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE="en",URI="https://cdn.captionhub.com/live/vtt/playlist/en/bbb.m3u8"');
+    });
+
+    test("requires a token", async () => {
+      const result = await run(["--flow", "aaa"]);
+
+      expect(result.code).toBe(ExitCode.UsageError);
+      expect(result.err).toContain("CAPTIONHUB_API_TOKEN");
+    });
+
+    test("reports an unknown flow", async () => {
+      const result = await run(["--flow", "nope", "--token", "tok"]);
+
+      expect(result.code).toBe(ExitCode.RewriteFailed);
+      expect(result.err).toContain("Flow nope was not found");
+    });
   });
 });

@@ -25,11 +25,25 @@ Two differences from the hosted manifest are worth knowing:
   actively captioning, which the knowledge base notes can make Safari and
   iOS drop captions and switch rendition. This rewriter always lists the
   configured tracks, so the player's view of the playlist is stable.
-- The hosted manifest picks up language changes on its own. Here the
-  tracks are configuration, so they must be refreshed by hand.
+- The hosted manifest picks up language changes on its own. Here they
+  are picked up within the flow cache window when the Lambda is given a
+  flow ID, or must be refreshed by hand when the tracks are pasted in.
 
-The Lambda's configuration is the flow's API representation, so setting
-it up is a copy-and-paste job. (For a playlist that never changes, the
+The simplest setup is to give the Lambda the flow ID and an API token.
+It reads the source playlist URL and the caption tracks from the flow
+itself and re-reads them every minute, so new languages appear without a
+redeploy:
+
+| Env var | Value |
+| --- | --- |
+| `CAPTIONHUB_FLOW_ID` | The flow's `flow_id`, shown in the CaptionHub UI and the API. |
+| `CAPTIONHUB_API_TOKEN` | A token from the API tab in team settings; see [Create an API key](https://support.captionhub.com/developers/4fuH3UnM2RNWB81Y6NEHgg/create-an-api-key/4fuH3UnM2TMshgmtLt4DNy). |
+
+Deploy (see [Deploy](#deploy)) and point players at the Function URL.
+That is the whole job. If the Lambda should not hold an API token, or
+you want to pin the tracks, copy them in by hand instead. The Lambda's
+configuration is the flow's API representation, so that too is a
+copy-and-paste job. (For a playlist that never changes, the
 [command-line tool](#rewrite-once-from-the-command-line) does the same
 rewrite without deploying anything.)
 
@@ -42,7 +56,7 @@ rewrite without deploying anything.)
 
    ```sh
    curl -s -H "Authorization: $CAPTIONHUB_API_TOKEN" \
-     https://api.captionhub.com/v1/timbra/<flow_id>
+     https://api.captionhub.com/api/v1/timbra/<flow_id>
    ```
 
    The response includes the source stream and the caption tracks:
@@ -89,7 +103,7 @@ rewrite without deploying anything.)
 
    ```sh
    curl -s -H "Authorization: $CAPTIONHUB_API_TOKEN" \
-     https://api.captionhub.com/v1/timbra/<flow_id> \
+     https://api.captionhub.com/api/v1/timbra/<flow_id> \
      | jq -c '.output_details.hls_output.playlist_tracks'
    ```
 
@@ -99,9 +113,39 @@ rewrite without deploying anything.)
    track, so the output tracks the live stream while the caption tracks
    stay fixed.
 
-If the flow's languages change, fetch the flow again and update
-`SUBTITLE_PLAYLISTS`. The Lambda does not call the CaptionHub API
-itself.
+With tracks pasted in, the Lambda never calls the CaptionHub API. If
+the flow's languages change, fetch the flow again and update
+`SUBTITLE_PLAYLISTS`.
+
+### Redundant streams
+
+The knowledge base's
+[recommendations for a redundant stream](https://support.captionhub.com/timbra/anHrwmAnQCHCsf4DjG5uGX/recommendations-for-a-redundant-stream/5GDESEkCzbveVXsmdRATwm)
+describe a primary and a backup flow, each with its own caption
+playlists, where every rendition in the multivariant playlist references
+the caption group belonging to its own origin. The rewriter supports
+this with a group per flow and a regular expression that picks the
+variants for that group by URI:
+
+```sh
+CAPTIONHUB_API_TOKEN=...
+CAPTIONHUB_FLOWS='[
+  {"flow_id": "aaa", "group_id": "primary-captions", "variant_pattern": "^https://primary\\."},
+  {"flow_id": "bbb", "group_id": "backup-captions",  "variant_pattern": "^https://backup\\."}
+]'
+```
+
+Given the playlist from that article, each `EXT-X-STREAM-INF` line
+whose URI starts with `https://primary.` gets
+`SUBTITLES="primary-captions"`, the `https://backup.` ones get
+`SUBTITLES="backup-captions"`, and one `EXT-X-MEDIA` tag per language
+is emitted for each group. A variant matching no pattern falls back to
+the first group without a pattern, or to `subs` if there is none.
+
+`variant_pattern` is tested against the variant URI after it has been
+made absolute, so patterns can anchor on the host. The same two keys
+can be set on individual entries in `SUBTITLE_PLAYLISTS` when the
+tracks are pasted in rather than fetched.
 
 ## Rewrite once from the command line
 
@@ -113,6 +157,9 @@ install it globally with `npm install -g .` to get a `timbra-rewrite`
 command.
 
 ```sh
+# Everything from the flow: source playlist URL and tracks
+npm run rewrite -- --flow bd62751212 --token "$CAPTIONHUB_API_TOKEN"
+
 # Fetch the source playlist and add tracks from a JSON file
 npm run rewrite -- \
   --playlist https://hls.example.com/live/stream.m3u8 \
@@ -120,7 +167,7 @@ npm run rewrite -- \
 
 # Pipe the tracks straight from the CaptionHub API
 curl -s -H "Authorization: $CAPTIONHUB_API_TOKEN" \
-    https://api.captionhub.com/v1/timbra/<flow_id> \
+    https://api.captionhub.com/api/v1/timbra/<flow_id> \
   | jq -c '.output_details.hls_output.playlist_tracks' \
   | npm run rewrite -- --playlist https://hls.example.com/live/stream.m3u8 --subtitles -
 
@@ -134,14 +181,19 @@ npm run rewrite -- \
 
 | Flag | Meaning |
 | --- | --- |
+| `--flow <id>` | Read the source playlist URL and tracks from this flow. Repeatable. |
+| `--flows <file\|json\|->` | Same as `CAPTIONHUB_FLOWS`, for redundant flows with their own groups and patterns. |
+| `--token <token>` | API token. Defaults to `$CAPTIONHUB_API_TOKEN`. |
+| `--api-url <url>` | API base URL. Defaults to `https://api.captionhub.com/api`. |
 | `--playlist <url\|file\|->` | Source playlist. An http(s) URL is fetched with the same timeout and validation as the Lambda; anything else is read as a file, `-` reads stdin. |
-| `--base-url <url>` | Where the source playlist is served from. Required for a file or stdin, since relative URIs are resolved against it. Optional for a URL, where it overrides the fetched URL. |
+| `--base-url <url>` | Where the source playlist is served from. Required for a file or stdin unless a flow supplies it, since relative URIs are resolved against it. Optional for a URL, where it overrides the fetched URL. |
 | `--subtitles <file\|json\|->` | Tracks as a JSON file, an inline JSON array, or `-` for stdin. Same shape and validation as `SUBTITLE_PLAYLISTS`. |
 | `--mode <add\|replace>` | Same as the `MODE` env var. Defaults to `add`. |
 | `--output <file>` | Write to a file instead of stdout. |
 
-Exit status is 0 on success, 2 for a usage or configuration error, and 1
-when the fetch fails or the input is not an HLS playlist. Unlike the
+An explicit `--playlist` or `--subtitles` wins over what a flow
+supplies. Exit status is 0 on success, 2 for a usage or configuration
+error, and 1 when a fetch fails or the input is not an HLS playlist. Unlike the
 Lambda, the output is a snapshot: rerun the command when the source
 playlist or the flow's tracks change.
 
@@ -151,9 +203,14 @@ Set these env vars on the Lambda:
 
 | Var | Required | Default | Description |
 | --- | --- | --- | --- |
-| `PLAYLIST_URL` | yes | — | Upstream HLS master playlist URL. |
-| `SUBTITLE_PLAYLISTS` | yes | `[]` | JSON array of subtitle tracks (see below). |
+| `PLAYLIST_URL` | unless a flow is set | — | Upstream HLS master playlist URL. Overrides the flow's `hls_url`. |
+| `SUBTITLE_PLAYLISTS` | unless a flow is set | `[]` | JSON array of subtitle tracks (see below). Overrides the flow's `playlist_tracks`. |
 | `MODE` | no | `add` | `add` keeps existing subtitle tracks; `replace` strips them and substitutes the configured set. |
+| `CAPTIONHUB_FLOW_ID` | no | — | Flow to read `hls_url` and `playlist_tracks` from. |
+| `CAPTIONHUB_FLOWS` | no | — | JSON array of `{"flow_id", "group_id", "variant_pattern"}` for several flows (see [Redundant streams](#redundant-streams)). Can be combined with `CAPTIONHUB_FLOW_ID`. |
+| `CAPTIONHUB_API_TOKEN` | when a flow is set | — | CaptionHub API token, sent as the `Authorization` header. |
+| `CAPTIONHUB_API_URL` | no | `https://api.captionhub.com/api` | API base URL. |
+| `CAPTIONHUB_FLOW_CACHE_SECONDS` | no | `60` | How long a fetched flow is reused before the API is asked again. If the API is unreachable, the last good copy is used. |
 
 `SUBTITLE_PLAYLISTS` is a JSON array with one object per caption track. The
 keys are the same ones the CaptionHub API uses for `playlist_tracks` in a
@@ -188,6 +245,8 @@ and every `EXT-X-STREAM-INF` line gains `SUBTITLES="subs"`.
 | `language_code` | yes | `LANGUAGE` attribute. |
 | `url` | yes | `URI` attribute. Must be http(s). |
 | `default` | no | `DEFAULT=YES` when true. Omitted or false gives `DEFAULT=NO`. |
+| `group_id` | no | `GROUP-ID` attribute. Defaults to `subs`. |
+| `variant_pattern` | no | Regular expression on variant URIs; matching variants reference this track's group. See [Redundant streams](#redundant-streams). |
 
 `label` and `language` are accepted as alternative spellings of
 `language_name` and `language_code`, and take precedence when both are
@@ -226,19 +285,15 @@ master playlist. The response:
 - Returns `502 Bad Gateway` when the upstream connection fails, the body
   is empty, exceeds 5 MB, or doesn't start with `#EXTM3U` (i.e. isn't an
   HLS playlist). Tolerates a leading UTF-8 BOM.
+- Returns `502 Bad Gateway` when a configured flow cannot be read from
+  the CaptionHub API and no cached copy exists, and `500` when the env
+  vars themselves are invalid.
 
 Client request headers are **not** forwarded to the origin — the proxy
 always issues a clean upstream request.
 
 ### Limitations
 
-- **One subtitle group for all variants.** Every track goes into
-  `GROUP-ID="subs"` and every variant references that group. The
-  knowledge base's
-  [redundant stream setup](https://support.captionhub.com/timbra/anHrwmAnQCHCsf4DjG5uGX/recommendations-for-a-redundant-stream/5GDESEkCzbveVXsmdRATwm),
-  where primary and backup renditions point at different caption
-  projects via different group IDs, is not expressible with this
-  configuration.
 - **Redirects on `PLAYLIST_URL` are not fully handled.** The upstream
   fetch follows `3xx` hops, but relative URIs inside the playlist are
   resolved against the configured `PLAYLIST_URL`, not the post-redirect

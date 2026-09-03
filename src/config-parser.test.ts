@@ -24,7 +24,7 @@ describe("ConfigParser.fromEnv", () => {
     expect(config.sourceUrl).toBe("https://example.com/master.m3u8");
     expect(config.mode).toBe("add");
     expect(config.subtitles).toHaveLength(1);
-    expect(config.subtitles[0].default).toBe(true);
+    expect(config.subtitles?.[0].default).toBe(true);
   });
 
   test("defaults SUBTITLE_PLAYLISTS to an empty list", () => {
@@ -130,8 +130,8 @@ describe("ConfigParser.fromEnv", () => {
 
       const config = ConfigParser.fromEnv(withSubs(mixed));
 
-      expect(config.subtitles[0].label).toBe("English (custom)");
-      expect(config.subtitles[0].language).toBe("en-GB");
+      expect(config.subtitles?.[0].label).toBe("English (custom)");
+      expect(config.subtitles?.[0].language).toBe("en-GB");
     });
 
     test("rejects invalid JSON", () => {
@@ -220,6 +220,117 @@ describe("ConfigParser.fromEnv", () => {
           ),
         ),
       ).toThrow(/\[1\]\.url must be a non-empty string/);
+    });
+  });
+
+  describe("group_id and variant_pattern", () => {
+    function withSubs(value: unknown): NodeJS.ProcessEnv {
+      return env({
+        PLAYLIST_URL: "https://example.com/master.m3u8",
+        SUBTITLE_PLAYLISTS: JSON.stringify(value),
+      });
+    }
+
+    test("passes group_id and variant_pattern through", () => {
+      const config = ConfigParser.fromEnv(
+        withSubs([
+          {
+            language_name: "English",
+            language_code: "en",
+            url: "https://cdn.captionhub.com/live/vtt/playlist/en/a.m3u8",
+            group_id: "primary-captions",
+            variant_pattern: "^https://primary\\.",
+          },
+        ]),
+      );
+
+      expect(config.subtitles?.[0].groupId).toBe("primary-captions");
+      expect(config.subtitles?.[0].variantPattern).toBe("^https://primary\\.");
+    });
+
+    test("leaves groupId and variantPattern unset when absent", () => {
+      const config = ConfigParser.fromEnv(
+        withSubs([
+          { label: "English", language: "en", url: "https://x.example.com/en.m3u8" },
+        ]),
+      );
+
+      expect(config.subtitles?.[0]).not.toHaveProperty("groupId");
+      expect(config.subtitles?.[0]).not.toHaveProperty("variantPattern");
+    });
+
+    test("rejects an invalid regular expression", () => {
+      expect(() =>
+        ConfigParser.fromEnv(
+          withSubs([
+            { label: "English", language: "en", url: "https://x.example.com/en.m3u8", variant_pattern: "(" },
+          ]),
+        ),
+      ).toThrow(/\[0\]\.variant_pattern must be a valid regular expression/);
+    });
+
+    test("rejects conflicting patterns within one group", () => {
+      expect(() =>
+        ConfigParser.fromEnv(
+          withSubs([
+            { label: "English", language: "en", url: "https://x.example.com/en.m3u8", group_id: "g", variant_pattern: "primary" },
+            { label: "Dutch", language: "nl", url: "https://x.example.com/nl.m3u8", group_id: "g", variant_pattern: "backup" },
+          ]),
+        ),
+      ).toThrow(/\[1\]\.variant_pattern conflicts/);
+    });
+  });
+
+  describe("CaptionHub flows", () => {
+    test("a flow id makes PLAYLIST_URL and SUBTITLE_PLAYLISTS optional", () => {
+      const config = ConfigParser.fromEnv(
+        env({ CAPTIONHUB_FLOW_ID: "bd62751212", CAPTIONHUB_API_TOKEN: "tok" }),
+      );
+
+      expect(config.sourceUrl).toBeUndefined();
+      expect(config.subtitles).toBeUndefined();
+      expect(config.flows).toEqual([{ flowId: "bd62751212", groupId: undefined, variantPattern: undefined }]);
+      expect(config.api).toEqual({ url: "https://api.captionhub.com/api", token: "tok", cacheMs: 60_000 });
+    });
+
+    test("requires a token when a flow is configured", () => {
+      expect(() =>
+        ConfigParser.fromEnv(env({ CAPTIONHUB_FLOW_ID: "bd62751212" })),
+      ).toThrow(/CAPTIONHUB_API_TOKEN env var is required/);
+    });
+
+    test("parses CAPTIONHUB_FLOWS with groups and patterns", () => {
+      const config = ConfigParser.fromEnv(
+        env({
+          CAPTIONHUB_API_TOKEN: "tok",
+          CAPTIONHUB_API_URL: "https://api.staging.example.com/",
+          CAPTIONHUB_FLOW_CACHE_SECONDS: "5",
+          CAPTIONHUB_FLOWS: JSON.stringify([
+            { flow_id: "aaa", group_id: "primary-captions", variant_pattern: "^https://primary\\." },
+            { flow_id: "bbb", group_id: "backup-captions", variant_pattern: "^https://backup\\." },
+          ]),
+        }),
+      );
+
+      expect(config.flows).toEqual([
+        { flowId: "aaa", groupId: "primary-captions", variantPattern: "^https://primary\\." },
+        { flowId: "bbb", groupId: "backup-captions", variantPattern: "^https://backup\\." },
+      ]);
+      expect(config.api).toEqual({ url: "https://api.staging.example.com", token: "tok", cacheMs: 5_000 });
+    });
+
+    test("rejects a flow entry without flow_id", () => {
+      expect(() =>
+        ConfigParser.fromEnv(
+          env({ CAPTIONHUB_API_TOKEN: "tok", CAPTIONHUB_FLOWS: JSON.stringify([{ group_id: "g" }]) }),
+        ),
+      ).toThrow(/CAPTIONHUB_FLOWS\[0\]\.flow_id must be a non-empty string/);
+    });
+
+    test("staticFromEnv refuses flow-based configuration", () => {
+      expect(() =>
+        ConfigParser.staticFromEnv(env({ CAPTIONHUB_FLOW_ID: "x", CAPTIONHUB_API_TOKEN: "tok" })),
+      ).toThrow(/ConfigLoader/);
     });
   });
 });

@@ -8,10 +8,15 @@ import { handler } from "../src/index";
 // tracks use the same shape as `output_details.hls_output.playlist_tracks`
 // in the CaptionHub API's flow response; the URLs are placeholders, the
 // rewriter doesn't fetch them.
-process.env.PLAYLIST_URL ??=
+//
+// With CAPTIONHUB_FLOW_ID (or CAPTIONHUB_FLOWS) and CAPTIONHUB_API_TOKEN
+// set, the defaults are skipped and the flow supplies both values.
+const usingFlow = Boolean(process.env.CAPTIONHUB_FLOW_ID || process.env.CAPTIONHUB_FLOWS);
+
+if (!usingFlow) process.env.PLAYLIST_URL ??=
   "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8";
 
-process.env.SUBTITLE_PLAYLISTS ??= JSON.stringify([
+if (!usingFlow) process.env.SUBTITLE_PLAYLISTS ??= JSON.stringify([
   {
     language_name: "English",
     default: true,
@@ -54,6 +59,10 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`Lambda available at http://localhost:${PORT}/`);
-  console.log(`Source playlist: ${process.env.PLAYLIST_URL}`);
+  console.log(
+    usingFlow
+      ? `Flow: ${process.env.CAPTIONHUB_FLOW_ID ?? process.env.CAPTIONHUB_FLOWS}`
+      : `Source playlist: ${process.env.PLAYLIST_URL}`,
+  );
   console.log(`Mode: ${process.env.MODE}`);
 });

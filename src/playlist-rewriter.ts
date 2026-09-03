@@ -3,6 +3,19 @@ export interface SubtitlePlaylist {
   language: string;
   default?: boolean;
   url: string;
+  /** GROUP-ID for the EXT-X-MEDIA tag. Defaults to "subs". */
+  groupId?: string;
+  /**
+   * Regular expression tested against each variant's URI. Variants that
+   * match get SUBTITLES set to this track's group. Tracks in one group
+   * share the first pattern defined among them.
+   */
+  variantPattern?: string;
+}
+
+interface SubtitleGroup {
+  id: string;
+  pattern?: RegExp;
 }
 
 export type Mode = "add" | "replace";
@@ -14,10 +27,14 @@ export interface RewriteConfig {
 }
 
 export class PlaylistRewriter {
-  private static readonly GROUP_ID = "subs";
+  private static readonly DEFAULT_GROUP_ID = "subs";
   private static readonly ABSOLUTE_URL = /^https?:\/\//i;
 
-  constructor(private readonly config: RewriteConfig) {}
+  private readonly groups: SubtitleGroup[];
+
+  constructor(private readonly config: RewriteConfig) {
+    this.groups = PlaylistRewriter.collectGroups(config.subtitles);
+  }
 
   rewrite(playlist: string): string {
     if (playlist.includes("#EXT-X-STREAM-INF")) {
@@ -38,15 +55,14 @@ export class PlaylistRewriter {
       );
     }
 
-    const rewritten = lines.map((line) => {
+    const rewritten = lines.map((line, index) => {
       if (!line.startsWith("#EXT-X-STREAM-INF")) return line;
+
+      const group = this.groupFor(PlaylistRewriter.variantUri(lines, index));
 
       if (line.includes("SUBTITLES=")) {
         if (replace) {
-          return line.replace(
-            /SUBTITLES="[^"]+"/,
-            `SUBTITLES="${PlaylistRewriter.GROUP_ID}"`,
-          );
+          return line.replace(/SUBTITLES="[^"]+"/, `SUBTITLES="${group}"`);
         }
         return line;
       }
@@ -54,7 +70,7 @@ export class PlaylistRewriter {
       const trailingNewline = line.endsWith("\n") ? "\n" : "";
       return (
         line.replace(/\n$/, "") +
-        `,SUBTITLES="${PlaylistRewriter.GROUP_ID}"` +
+        `,SUBTITLES="${group}"` +
         trailingNewline
       );
     });
@@ -71,10 +87,51 @@ export class PlaylistRewriter {
     return (
       "#EXTM3U\n" +
       "#EXT-X-VERSION:3\n" +
-      `#EXT-X-STREAM-INF:BANDWIDTH=1655093,AVERAGE-BANDWIDTH=1332156,SUBTITLES="${PlaylistRewriter.GROUP_ID}"\n` +
+      `#EXT-X-STREAM-INF:BANDWIDTH=1655093,AVERAGE-BANDWIDTH=1332156,SUBTITLES="${this.groupFor(this.config.sourceUrl)}"\n` +
       `${this.config.sourceUrl}\n` +
       `${this.subtitleMediaTags().join("\n")}\n`
     );
+  }
+
+  /**
+   * Picks the GROUP-ID a variant should reference: the first group whose
+   * pattern matches the variant URI, else the first group without a
+   * pattern, else the default group.
+   */
+  private groupFor(variantUri: string): string {
+    const matched = this.groups.find((g) => g.pattern?.test(variantUri));
+    if (matched) return matched.id;
+    const general = this.groups.find((g) => !g.pattern);
+    return general?.id ?? PlaylistRewriter.DEFAULT_GROUP_ID;
+  }
+
+  private static collectGroups(subtitles: SubtitlePlaylist[]): SubtitleGroup[] {
+    const groups: SubtitleGroup[] = [];
+    for (const track of subtitles) {
+      const id = PlaylistRewriter.groupIdOf(track);
+      let group = groups.find((g) => g.id === id);
+      if (!group) {
+        group = { id };
+        groups.push(group);
+      }
+      if (!group.pattern && track.variantPattern) {
+        group.pattern = new RegExp(track.variantPattern);
+      }
+    }
+    return groups;
+  }
+
+  private static groupIdOf(track: SubtitlePlaylist): string {
+    return track.groupId || PlaylistRewriter.DEFAULT_GROUP_ID;
+  }
+
+  /** The URI line that follows an EXT-X-STREAM-INF tag. */
+  private static variantUri(lines: string[], from: number): string {
+    for (let i = from + 1; i < lines.length; i++) {
+      const candidate = lines[i].trim();
+      if (candidate && !candidate.startsWith("#")) return candidate;
+    }
+    return "";
   }
 
   private subtitleMediaTags(): string[] {
@@ -83,7 +140,7 @@ export class PlaylistRewriter {
       const language = (p.language ?? "").toLowerCase();
       const name = p.label || language || "Subtitles";
       return (
-        `#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="${PlaylistRewriter.GROUP_ID}",` +
+        `#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="${PlaylistRewriter.groupIdOf(p)}",` +
         `NAME="${name}",DEFAULT=${defaultFlag},AUTOSELECT=YES,FORCED=NO,` +
         `LANGUAGE="${language}",URI="${p.url}",CHARACTERISTICS="public.machine-generated"`
       );
