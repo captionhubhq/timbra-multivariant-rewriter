@@ -71,16 +71,11 @@ export class ConfigParser {
     }
     const obj = entry as Record<string, unknown>;
 
-    for (const field of ["label", "language", "url"] as const) {
-      const value = obj[field];
-      if (typeof value !== "string" || value.length === 0) {
-        throw new ConfigError(
-          `SUBTITLE_PLAYLISTS[${index}].${field} must be a non-empty string`,
-        );
-      }
-    }
+    const label = ConfigParser.requireString(obj, index, "label", "language_name");
+    const language = ConfigParser.requireString(obj, index, "language", "language_code");
+    const url = ConfigParser.requireString(obj, index, "url");
 
-    if (!ConfigParser.isHttpUrl(obj.url as string)) {
+    if (!ConfigParser.isHttpUrl(url)) {
       throw new ConfigError(
         `SUBTITLE_PLAYLISTS[${index}].url must be an http(s) URL`,
       );
@@ -92,12 +87,28 @@ export class ConfigParser {
       );
     }
 
-    return {
-      label: obj.label as string,
-      language: obj.language as string,
-      default: obj.default as boolean | undefined,
-      url: obj.url as string,
-    };
+    return { label, language, default: obj.default as boolean | undefined, url };
+  }
+
+  /**
+   * Reads a required string field. `alias` is the key the CaptionHub API
+   * uses for the same value in `playlist_tracks`, so an API response can be
+   * pasted into SUBTITLE_PLAYLISTS unchanged.
+   */
+  private static requireString(
+    obj: Record<string, unknown>,
+    index: number,
+    field: string,
+    alias?: string,
+  ): string {
+    const value = obj[field] ?? (alias ? obj[alias] : undefined);
+    if (typeof value !== "string" || value.length === 0) {
+      const name = alias ? `${field} (or ${alias})` : field;
+      throw new ConfigError(
+        `SUBTITLE_PLAYLISTS[${index}].${name} must be a non-empty string`,
+      );
+    }
+    return value;
   }
 
   private static isHttpUrl(value: string): boolean {

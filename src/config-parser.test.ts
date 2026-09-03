@@ -83,6 +83,57 @@ describe("ConfigParser.fromEnv", () => {
       });
     }
 
+    test("accepts the playlist_tracks shape returned by the CaptionHub API", () => {
+      const apiTracks = JSON.stringify([
+        {
+          language_name: "English",
+          default: true,
+          language_code: "en",
+          url: "https://cdn.captionhub.com/live/vtt/playlist/en/stream.m3u8",
+        },
+        {
+          language_name: "Nederlands",
+          default: false,
+          language_code: "nl",
+          url: "https://cdn.captionhub.com/live/vtt/playlist/nl/stream.m3u8",
+        },
+      ]);
+
+      const config = ConfigParser.fromEnv(withSubs(apiTracks));
+
+      expect(config.subtitles).toEqual([
+        {
+          label: "English",
+          language: "en",
+          default: true,
+          url: "https://cdn.captionhub.com/live/vtt/playlist/en/stream.m3u8",
+        },
+        {
+          label: "Nederlands",
+          language: "nl",
+          default: false,
+          url: "https://cdn.captionhub.com/live/vtt/playlist/nl/stream.m3u8",
+        },
+      ]);
+    });
+
+    test("prefers label/language when both spellings are present", () => {
+      const mixed = JSON.stringify([
+        {
+          label: "English (custom)",
+          language_name: "English",
+          language: "en-GB",
+          language_code: "en",
+          url: "https://x.example.com/x.m3u8",
+        },
+      ]);
+
+      const config = ConfigParser.fromEnv(withSubs(mixed));
+
+      expect(config.subtitles[0].label).toBe("English (custom)");
+      expect(config.subtitles[0].language).toBe("en-GB");
+    });
+
     test("rejects invalid JSON", () => {
       expect(() => ConfigParser.fromEnv(withSubs("{not json"))).toThrow(
         /valid JSON/,
@@ -110,7 +161,7 @@ describe("ConfigParser.fromEnv", () => {
             ]),
           ),
         ),
-      ).toThrow(/\[0\]\.language must be a non-empty string/);
+      ).toThrow(/\[0\]\.language \(or language_code\) must be a non-empty string/);
     });
 
     test("rejects empty string fields", () => {
@@ -122,7 +173,7 @@ describe("ConfigParser.fromEnv", () => {
             ]),
           ),
         ),
-      ).toThrow(/\[0\]\.label must be a non-empty string/);
+      ).toThrow(/\[0\]\.label \(or language_name\) must be a non-empty string/);
     });
 
     test("rejects non-http(s) URLs in entries", () => {

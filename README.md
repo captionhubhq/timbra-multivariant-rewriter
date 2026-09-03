@@ -4,6 +4,86 @@ AWS Lambda that proxies an HLS multivariant (master) playlist and injects
 subtitle tracks. Existing relative URIs in the upstream playlist are
 absolutised so the response stands on its own from any origin.
 
+## Typical use case
+
+A CaptionHub Timbra flow with HLS output publishes one VTT playlist per
+caption language. CaptionHub also hosts a rewritten multivariant playlist
+that already references those tracks (`modified_multivariant_url` in the
+API). Some teams prefer to serve that playlist from infrastructure they
+control instead: their own domain and CDN, their own access controls, or
+a player that must not be repointed at a third-party host. This Lambda
+covers that case.
+
+The Lambda's configuration is the flow's API representation, so setting
+it up is a copy-and-paste job:
+
+1. Fetch the flow from the CaptionHub API
+   ([Get flow](https://api-docs.captionhub.com/docs/captionhub/659557c352a16-get-flow)).
+   The token comes from your team's API settings.
+
+   ```sh
+   curl -s -H "Authorization: $CAPTIONHUB_API_TOKEN" \
+     https://api.captionhub.com/v1/timbra/<flow_id>
+   ```
+
+   The response includes the source stream and the caption tracks:
+
+   ```json
+   {
+     "flow_id": "bd62751212",
+     "name": "Live stream 24/7",
+     "hls_details": {
+       "hls_url": "https://hls.example.com/live/stream.m3u8",
+       "hls_transcription_url": null
+     },
+     "output_details": {
+       "hls_output": {
+         "modified_multivariant_url": "https://hls.captionhub.com/live/modified_multivariant/stream.m3u8?token=abc123",
+         "playlist_tracks": [
+           {
+             "language_name": "English",
+             "default": true,
+             "language_code": "en",
+             "url": "https://cdn.captionhub.com/live/vtt/playlist/en/stream.m3u8"
+           },
+           {
+             "language_name": "Nederlands",
+             "default": false,
+             "language_code": "nl",
+             "url": "https://cdn.captionhub.com/live/vtt/playlist/nl/stream.m3u8"
+           }
+         ]
+       }
+     }
+   }
+   ```
+
+2. Map two fields from the response onto the Lambda's env vars:
+
+   | Env var | Value |
+   | --- | --- |
+   | `PLAYLIST_URL` | `hls_details.hls_url`, the multivariant playlist CaptionHub is pulling from. |
+   | `SUBTITLE_PLAYLISTS` | `output_details.hls_output.playlist_tracks`, verbatim. |
+   | `MODE` | `add`, or `replace` if the source playlist already carries subtitle tracks that should be dropped. |
+
+   With `jq`, the second one is a one-liner:
+
+   ```sh
+   curl -s -H "Authorization: $CAPTIONHUB_API_TOKEN" \
+     https://api.captionhub.com/v1/timbra/<flow_id> \
+     | jq -c '.output_details.hls_output.playlist_tracks'
+   ```
+
+3. Deploy (see [Deploy](#deploy)) and point players at the Function URL
+   instead of the source playlist. The Lambda fetches the source playlist
+   on every request and appends one `EXT-X-MEDIA` subtitle entry per
+   track, so the output tracks the live stream while the caption tracks
+   stay fixed.
+
+If the flow's languages change, fetch the flow again and update
+`SUBTITLE_PLAYLISTS`. The Lambda does not call the CaptionHub API
+itself.
+
 ## Configuration
 
 Set these env vars on the Lambda:
@@ -14,24 +94,38 @@ Set these env vars on the Lambda:
 | `SUBTITLE_PLAYLISTS` | yes | `[]` | JSON array of subtitle tracks (see below). |
 | `MODE` | no | `add` | `add` keeps existing subtitle tracks; `replace` strips them and substitutes the configured set. |
 
-`SUBTITLE_PLAYLISTS` shape:
+`SUBTITLE_PLAYLISTS` is a JSON array with one object per caption track. The
+keys are the same ones the CaptionHub API uses for `playlist_tracks` in a
+flow's `output_details.hls_output`, so that array can be pasted in
+unchanged (see [Typical use case](#typical-use-case)):
 
 ```json
 [
   {
-    "label": "English",
-    "language": "en",
+    "language_name": "English",
     "default": true,
-    "url": "https://captions.example.com/streams/abc/en.m3u8"
+    "language_code": "en",
+    "url": "https://cdn.captionhub.com/live/vtt/playlist/en/stream.m3u8"
   },
   {
-    "label": "Nederlands",
-    "language": "nl",
+    "language_name": "Nederlands",
     "default": false,
-    "url": "https://captions.example.com/streams/abc/nl.m3u8"
+    "language_code": "nl",
+    "url": "https://cdn.captionhub.com/live/vtt/playlist/nl/stream.m3u8"
   }
 ]
 ```
+
+| Key | Required | Used for |
+| --- | --- | --- |
+| `language_name` | yes | `NAME` attribute of the `EXT-X-MEDIA` tag. |
+| `language_code` | yes | `LANGUAGE` attribute. |
+| `url` | yes | `URI` attribute. Must be http(s). |
+| `default` | no | `DEFAULT=YES` when true. Omitted or false gives `DEFAULT=NO`. |
+
+`label` and `language` are accepted as alternative spellings of
+`language_name` and `language_code`, and take precedence when both are
+present.
 
 ## Deploy
 
@@ -116,7 +210,7 @@ Override any field by exporting the relevant env var before `npm run dev`:
 
 ```sh
 PLAYLIST_URL=https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8 \
-  SUBTITLE_PLAYLISTS='[{"label":"EN","language":"en","default":true,"url":"https://captions.example.com/en.m3u8"}]' \
+  SUBTITLE_PLAYLISTS='[{"language_name":"English","default":true,"language_code":"en","url":"https://cdn.captionhub.com/live/vtt/playlist/en/demo.m3u8"}]' \
   MODE=add \
   npm run dev
 ```

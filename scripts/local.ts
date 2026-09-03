@@ -2,25 +2,27 @@ import * as http from "http";
 import type { APIGatewayProxyEventV2, Context } from "aws-lambda";
 import { handler } from "../src/index";
 
-// Example defaults — override any of these by exporting the env var before
+// Example defaults. Override any of these by exporting the env var before
 // running the script. The source playlist is Mux's public Tears of Steel
-// test stream (multivariant, no existing subtitle tracks). The subtitle URLs
-// are placeholders — the rewriter doesn't fetch them.
+// test stream (multivariant, no existing subtitle tracks). The subtitle
+// tracks use the same shape as `output_details.hls_output.playlist_tracks`
+// in the CaptionHub API's flow response; the URLs are placeholders, the
+// rewriter doesn't fetch them.
 process.env.PLAYLIST_URL ??=
   "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8";
 
 process.env.SUBTITLE_PLAYLISTS ??= JSON.stringify([
   {
-    label: "English (CaptionHub)",
-    language: "en",
+    language_name: "English",
     default: true,
-    url: "https://captions.example.com/streams/demo/en.m3u8",
+    language_code: "en",
+    url: "https://cdn.captionhub.com/live/vtt/playlist/en/demo.m3u8",
   },
   {
-    label: "Nederlands (CaptionHub)",
-    language: "nl",
+    language_name: "Nederlands",
     default: false,
-    url: "https://captions.example.com/streams/demo/nl.m3u8",
+    language_code: "nl",
+    url: "https://cdn.captionhub.com/live/vtt/playlist/nl/demo.m3u8",
   },
 ]);
 
